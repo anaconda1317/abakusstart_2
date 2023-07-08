@@ -4923,6 +4923,9 @@ a {
   margin: 0 auto;
   color: #aaaaaa;
   text-transform: none;
+  text-decoration: none;
+  color: inherit;
+  cursor: default;
   border-top: 1px solid #aaaaaa;
 }
 .reserv__text:hover {
