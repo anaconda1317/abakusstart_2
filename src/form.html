@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ru" class="page">
+
+@include('partials/head.html', {
+  "title": "Ментальная арифметика для детей от 4,5 лет в Красноярске | &laquo;СТАРТ&raquo;",
+  "description": "Запишите ребенка на занятия по ментальной арифметике в детский центр &laquo;СТАРТ&raquo;! Пробное занятие бесплатно! Стоимость урока от 900 руб.",
+  "site": "abakusstart.ru",
+})
+
+<body>
+  <div class="container">
+    @include('partials/header.html')
+    <main class="page-main">
+      @include('partials/common/title-visually-hidden.html',
+        "text": "Страница с отзывом о детском центре &laquo;СТАРТ&raquo;. "
+      )
+      @include('partials/form/banner.html')
+      @include('partials/common/breadcrumbs.html',{
+        "oneLink": '/form.php',
+        "oneTitle": 'Форма отзыва',
+        "twoLink": '',
+        "twoTitle": '',
+      })
+      @include('partials/form/form.html')
+      @include('partials/common/post-social.html', {
+        'url': 'form.php'
+      })
+    </main>
+
+
+    @include('partials/footer.html')
+    @include('partials/common/chat.html')
+    @include('partials/common/button-up.html')
+
+  </div>
+  @include('partials/common/json.html', {
+    'url': 'https://abakusstart.ru',
+    'logo': 'https://abakusstart.ru/img/logo-abakusstart-desktop.svg',
+    'alternateName': 'Развивающий детский центр «СТАРТ» в Красноярске мр-н Северный.',
+    'name': 'Детский центр развития в Красноярске в Северном | &laquo;СТАРТ&raquo;.',
+    'description': 'Первое занятие бесплатно. Детский центр развития &laquo;СТАРТ&raquo; расположен в микр-н Северный, и приглашает детей от 4 лет на занятия по ментальной арифметике, робототехнике, подготовке к школе, английскому языку, скорочтению. А также услуги логопеда-дефектолога, репетитора начальной школы, психотерапевта от 15+. Стоимость урока от 500 руб.',
+    'email': 'info@abakusstart.ru',
+    'legalName': 'ООО «Берег»',
+    'image': 'https://abakusstart.ru/img/start_center_abakusstart.png',
+    'addressCountry': 'RU',
+    'addressLocality':  'Красноярск, Советский район',
+    'addressRegion': 'Красноярский край',
+    'postalCode': '660118',
+    'streetAddress': 'Мате Залки, 11',
+    'telephone': '+7-908-010-4854',
+    'sameAs': 'https://instagram.com/start.centr?igshid=2c5mk9f2v986',
+    'contactPoint': {
+      'telephone': '+7-908-010-4854',
+      'contactType': 'customer service',
+    }
+  })
+  @include('partials/common/json2.html', {
+    'url': 'https://abakusstart.ru',
+    'logo': 'https://abakusstart.ru/img/logo-abakusstart-desktop.svg',
+  })
+  @include('partials/common/inner_json_breadcrumbs.html', {
+    "position": 2,
+      "@id": "https://abakusstart.ru/form.php",
+            "name": "ФОРМА ОТЗЫВА"
+  })
+</body>
+
+</html>

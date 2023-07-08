@@ -1,0 +1,30 @@
+<!-- разметка LocalBusiness -->
+<script type="application/ld+json">
+    {
+      "@context": "http://schema.org",
+      "@type": "LocalBusiness",
+      "additionalType": "AutoRental",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "@addressLocality",
+        "streetAddress": "@streetAddress"
+      },
+      "name": "@name",
+      "email": "@email",
+      "openingHours": [
+        "Mo-Fr 10:00-18:00",
+        "Sa-Su 10:00-20:00"
+      ],
+      "priceRange": "@priceRange",
+      "telephone": [
+        "@telephone"
+      ],
+      "image": "@image",
+        "url": "@url",
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": "@GeoCoordinates.latitude",
+        "longitude": "@GeoCoordinates.latitude.longitude"
+      }
+    }
+  </script>

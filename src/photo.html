@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ru" class="page">
+
+@include('partials/head.html', {
+  "title": "Ментальная арифметика для детей от 4,5 лет в Красноярске | &laquo;СТАРТ&raquo;",
+  "description": "Запишите ребенка на занятия по ментальной арифметике в детский центр &laquo;СТАРТ&raquo;! Пробное занятие бесплатно! Стоимость урока от 900 руб.",
+  "site": "abakusstart.ru",
+})
+
+<body>
+  <div class="container">
+    @include('partials/header.html')
+    <main class="page-main">
+      @include('partials/common/title-visually-hidden.html',
+        "text": "Страница с фото и видео о Седоне"
+      )
+      @include('partials/photo/banner.html')
+      @include('partials/photo/articles.html')
+    </main>
+
+
+    @include('partials/footer.html')
+    @include('partials/common/chat.html')
+    @include('partials/common/button-up.html')
+
+  </div>
+</body>
+
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ru" class="page">
+
+@include('partials/head.html', {
+  "title": "Ошибка 404 | детский центр &laquo;СТАРТ&raquo; в Красноярске",
+  "description": "Ошибка 404 детский центр развития &laquo;СТАРТ&raquo; в Красноярске, Советский район.",
+  "site": "abakusstart.ru",
+})
+
+<body>
+  <div class="container">
+    @include('partials/header.html')
+    <main class="page-main">
+      @include('partials/common/title-visually-hidden.html',
+        "text": "Ошибка 404 детский центр развития &laquo;СТАРТ&raquo; в Красноярске, Советский район. "
+      )
+      @include('partials/404/block-error.html')
+    </main>
+
+
+      @include('partials/footer.html')
+      @include('partials/common/chat.html')
+      @include('partials/common/button-up.html')
+      <!-- @include('html/h1.html') пример include -->
+    </div>
+  </body>
+
+  </html>

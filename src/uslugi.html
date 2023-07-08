@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ru" class="page">
+
+@include('partials/head.html', {
+  "title": "Услуги детского центра развития &laquo;СТАРТ&raquo;.",
+  "description": "Первое занятие бесплатно. В детском центре &laquo;СТАРТ&raquo;в Красноярске: ментальная арифметика, робототехника, репетитор начальных классов, логопед-дефектолог, подготовка к школе, осмысленное чтение, дошколенок, английский язык для детей онлайн, каллиграфия для детей, детский нейропсихолог, детский психотерапевт",
+  "site": "abakusstart.ru",
+})
+
+<body>
+  <div class="container">
+    @include('partials/header.html')
+    <main class="page-main">
+      @include('partials/common/title-visually-hidden.html',
+        "text": "Вводная секция с баннером о занятиях в детском центре &laquo;СТАРТ&raquo;."
+      )
+      @include('partials/uslugi/banner.html')
+      @include('partials/common/breadcrumbs.html',{
+        "oneLink": '/uslugi.php',
+        "oneTitle": 'Услуги',
+        "twoLink": '',
+        "twoTitle": '',
+      })
+      @include('partials/uslugi/cards/cards-list.html')
+      @include('partials/uslugi/price.html')
+      @include('partials/common/post-social.html', {
+        'url': 'uslugi.php'
+      })
+
+    </main>
+
+
+    @include('partials/footer.html')
+    @include('partials/common/chat.html')
+    @include('partials/common/button-up.html')
+    @include('partials/uslugi/modal.html')
+    @include('partials/common/json2.html')
+    @include('partials/common/inner_json_breadcrumbs.html', {
+      "position": 2,
+        "@id": "https://abakusstart.ru/uslugi.php",
+        "name": "УСЛУГИ"
+    })
+    @include('partials/common/product_json.html')
+    <!-- @include('html/h1.html') пример include -->
+  </div>
+</body>
+
+</html>

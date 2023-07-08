@@ -1,0 +1,152 @@
+<form class="feedback-form" id="feedback-form" action="/telegram/send.php" method="post">
+
+  <fieldset class="feedback-form__item feedback-form__item--name">
+    <b class="feedback-form__b feedback-form__b--name">Представьтесь:</b>
+    <div class="form-name">
+      <label class="form-name__label" for="name"><span class="visually-hidden">Пожалуйста, введите
+          ваше</span>Имя<sup>*</sup>:</label>
+      <input class="form-name__input" type="text" name="name" id="name"  pattern="^[а-яА-ЯёЁa-zA-Z]+$" placeholder="Дмитрий" autocomplete="off" required>
+    </div>
+
+    <div class="form-name">
+      <label class="form-name__label" for="surname"><span class="visually-hidden">Пожалуйста, введите
+          вашу</span>Фамилия<sup>*</sup>:</label>
+      <input class="form-name__input" type="text" name="surname" id="surname"  pattern="^[а-яА-ЯёЁa-zA-Z]+$" placeholder="МИРОНОВ" autocomplete="off" required>
+    </div>
+
+    <div class="form-name">
+      <label class="form-name__label" for="grandfathername"><span class="visually-hidden">Пожалуйста, введите
+          ваше</span>Отчество<sup>*</sup>:</label>
+      <input class="form-name__input" type="text" name="grandfathername"  pattern="^[а-яА-ЯёЁa-zA-Z]+$" id="grandfathername"
+        placeholder="Васильевич" autocomplete="off" required>
+    </div>
+  </fieldset>
+
+
+
+
+  <fieldset class="feedback-form__item feedback-form__item--contacts">
+    <b class="feedback-form__b feedback-form__b--contacts">Контактная информация:</b>
+    <div class="feedback-form__wrapper feedback-form__wrapper--contacts">
+      <div class="form-contact">
+        <label class="form-contact__label" for="tel"><span class="form-contact__hiding-tel"><span
+              class="visually-hidden">Пожалуйста, введите ваш</span>Контактный </span>телефон<sup>*</sup>:
+        </label>
+        <p class="form-contact__input-container">
+          <input class="form-contact__input phone__mask" type="tel" name="tel" id="tel" placeholder="+7(___)___-__-__"
+          autocomplete="off" required>
+          <span class="form-contact__logo form-contact__logo--phone"></span>
+        </p>
+      </div>
+
+
+
+
+      <div class="form-contact">
+        <label class="form-contact__label" for="email"><span class="visually-hidden">Пожалуйста, введите
+            вашу</span>Электронная почта<sup>*</sup>:</label>
+        <p class="form-contact__input-container">
+          <input class="form-contact__input" type="email" name="email" id="email" placeholder="Введите e-mail"
+          autocomplete="off" required>
+          <span class="form-contact__logo form-contact__logo--mail"></span>
+        </p>
+      </div>
+    </div>
+  </fieldset>
+
+
+  <fieldset class="feedback-form__item feedback-form__item--genfeedback">
+    <b class="feedback-form__b feedback-form__b--genfeedback">Ваше Общее впечатление:</b>
+    <div class="feedback-form__wrapper">
+      <p class="form-radio">
+        <input class="form-radio__input visually-hidden" type="radio" id="positive" name="general-feedback"
+          value="positive" >
+        <label class="form-radio__label" for="positive"><span class="visually-hidden">Ваше впечатление? Выберите,
+            пожалуйста.</span>Скорее положительное</label>
+      </p>
+
+      <p class="form-radio">
+        <input class="form-radio__input visually-hidden" type="radio" id="negative" name="general-feedback"
+          value="negative">
+        <label class="form-radio__label" for="negative"><span class="visually-hidden">Ваше впечатление? Выберите,
+            пожалуйста.</span>Скорее отрицательное</label>
+      </p>
+
+      <p class="form-radio">
+        <input class="form-radio__input visually-hidden" type="radio" id="dificlt" name="general-feedback"
+          value="dificlt">
+        <label class="form-radio__label" for="dificlt"><span class="visually-hidden">Ваше впечатление? Выберите,
+            пожалуйста.</span>Затрудняюсь ответить</label>
+      </p>
+    </div>
+  </fieldset>
+
+<!-- чекбоксы по предметам начало -->
+  <fieldset class="feedback-form__item feedback-form__item--visited-places">
+    <b class="feedback-form__b feedback-form__b--visited-places">Посещенные вашим ребенком занятия:</b>
+    <div class="feedback-form__wrapper feedback-form__wrapper--visited">
+      <p class="form-chbx form-chbx--mental">
+        <input class="form-chbx__input visually-hidden" type="checkbox" name="mental" id="mental">
+        <label class="form-chbx__label" for="mental"><span class="visually-hidden">Пожалуйста, отметьте, посетили
+            ли вы эти занятия?</span>Арифметика</label>
+      </p>
+      <p class="form-chbx form-chbx--robot">
+        <input class="form-chbx__input visually-hidden" type="checkbox" name="robot" id="robot">
+        <label class="form-chbx__label" for="robot"><span class="visually-hidden">Пожалуйста, отметьте, посетили
+            ли вы эти занятия?</span>Робототехника</label>
+      </p>
+      <p class="form-chbx form-chbx--school">
+        <input class="form-chbx__input visually-hidden" type="checkbox" name="school" id="school">
+        <label class="form-chbx__label" for="school"><span class="visually-hidden">Пожалуйста, отметьте, посетили
+            ли вы эти занятия?</span>Репетитор</label>
+      </p>
+      <p class="form-chbx form-chbx--logoped">
+        <input class="form-chbx__input visually-hidden" type="checkbox" name="logoped" id="logoped">
+        <label class="form-chbx__label" for="logoped"><span class="visually-hidden">Пожалуйста, отметьте, посетили
+          ли вы эти занятия?</span>Логопед</label>
+
+      </p>
+      <p class="form-chbx form-chbx--english">
+        <input class="form-chbx__input visually-hidden" type="checkbox" name="english" id="english">
+        <label class="form-chbx__label" for="english"><span class="visually-hidden">Пожалуйста, отметьте, посетили
+          ли вы эти занятия?</span>Английский</label>
+      </p>
+      <p class="form-chbx form-chbx--brain">
+        <input class="form-chbx__input visually-hidden" type="checkbox" name="brain" id="brain">
+        <label class="form-chbx__label" for="brain"><span class="visually-hidden">Пожалуйста, отметьте, посетили
+            ли вы эти занятия?</span>Нейропсихолог</label>
+      </p>
+      <p class="form-chbx form-chbx--psycho">
+        <input class="form-chbx__input visually-hidden" type="checkbox" name="psycho" id="psycho">
+        <label class="form-chbx__label" for="psycho"><span class="visually-hidden">Пожалуйста, отметьте, посетили
+            ли вы эти занятия?</span>Психотерапевт</label>
+      </p>
+      <p class="form-chbx form-chbx--calligraphy">
+        <input class="form-chbx__input visually-hidden" type="checkbox" name="calligraphy" id="calligraphy">
+        <label class="form-chbx__label" for="calligraphy"><span class="visually-hidden">Пожалуйста, отметьте, посетили
+          ли вы эти занятия?</span>Каллиграфия</label>
+
+      </p>
+    </div>
+
+  </fieldset>
+<!-- чекбоксы по предметам конец -->
+
+  <fieldset class="feedback-form__item feedback-form__item--feedback">
+    <b class="feedback-form__b feedback-form__b--feedback">Ваши впечатления от занятий:</b>
+    <textarea class="feedback-form__textarea" id="feedback" name="feedback" rows="5"
+      placeholder="Опишите, пожалуйста свои впечатления от занятий в нашем детском центре."></textarea>
+
+      <!-- <figcaption class="feedback-form__caption">Каждый оставленный отзыв проходит ряд проверок, прежде чем будет размещен на сайте.
+         Оригинальные тексты не редактируются и не фильтруются.
+      </figcaption> -->
+  </fieldset>
+  <input type="hidden" name="act" value="review">
+  <!-- recapcha_generator -->
+  <fieldset class="feedback-form__item feedback-form__item--captcha">
+    <div class="g-recaptcha" data-sitekey="6Lec4xMlAAAAABWNHpZy81amc7ogVSO-ektm3SOT"></div>
+    <span class="feedback-form__item--captcha-error" style="color: #ff0000; font-weight: 700; "></span>
+</fieldset>
+  <!-- recapcha_generator -->
+  <button class=" button feedback-form__button" type="submit">Отправить отзыв</button>
+</form>

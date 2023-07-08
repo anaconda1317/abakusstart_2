@@ -1,0 +1,270 @@
+.carousel__wrapper {
+  position: relative;
+  width: auto;
+  // height: 765px;
+  height: 770px;
+  margin: 0 auto;
+  overflow: hidden;
+  // padding: 0;
+}
+
+.carousel__story-count {
+  position: relative;
+  display: block;
+  height: min-content;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.86;
+  text-align: center;
+  color: #1f2829;
+  text-transform: uppercase;
+  z-index: 5;
+}
+
+.carousel {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transform: translate(-50%, -50%);
+
+  background-color: #fff;
+}
+
+.carousel__items-container {
+  @include list-reset();
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  display: flex;
+  // align-items: center;
+  align-items: flex-start;
+}
+
+.carousel__item {
+  min-width: 100%;
+  display: none;
+  height: 100%;
+  position: relative;
+  animation: 0.5s ease-in-out;
+  margin: 0 auto;
+  // align-items: center;
+  align-items: flex-start;
+  align-self: stretch;
+  cursor: pointer;
+}
+
+.active,
+.next {
+  // padding-top: 10px;
+  display: flex;
+}
+
+.next {
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+
+// .control {
+//   position: absolute;
+//   top: 0;
+//   bottom: 0;
+//   width: 15%;
+//   cursor: pointer;
+// }
+
+// я заменила -старое закомичено - начало
+.carousel__control {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  margin: auto 0;
+  display: flex;
+  align-items: center;
+  // width: 15%;
+  width: 120px;
+  height: 120px;
+  padding: 28px;
+  background-color: #0033ff;
+  // background-color: rgba(0,51,255,.5);
+  border: none;
+  border-radius: 50%;
+  box-sizing: border-box;
+  cursor: pointer;
+  z-index: 1;
+
+    &:hover {
+      // opacity: 0.7;
+      background-color: #4c70ff;
+    }
+    
+    &:active {
+      // opacity: 0.5;
+      background-color: #7f99ff;
+    }
+}
+
+.carousel__control.left  {
+  left: 0;
+  right: auto;
+  justify-content: flex-end;
+  transform: translateX(-50%);
+}
+
+.carousel__control.right {
+  right: 0;
+  left: auto;
+  justify-content: flex-start;
+  transform: translateX(50%);
+}
+
+.carousel__arrow  {
+  fill: $white;
+}
+
+// .control  svg {
+//   fill: #ffffff;
+// }
+
+
+// я заменила -старое закомичено -конец
+
+
+// .control.left {
+//   left: 0;
+//   right: auto;
+// }
+
+// .control.right {
+//   right: 0;
+//   left: auto;
+// }
+
+.carousel__arrow.right {
+  right: 50%;
+}
+
+.to-left {
+  animation-name: left;
+}
+
+.from-right {
+  animation-name: right;
+}
+
+.to-right {
+  animation-name: right;
+  animation-direction: reverse;
+  // animation-duration: .6s;
+  // animation-timing-function: linear;
+}
+
+.from-left {
+  animation-name: left;
+  animation-direction: reverse;
+  // animation-duration: .6s;
+  // animation-timing-function: linear;
+}
+
+@keyframes left {
+  from {
+    left: 0;
+  }
+  to {
+    left: -100%;
+  }
+}
+
+@keyframes right {
+  from {
+    left: 100%;
+  }
+  to {
+    left: 0;
+  }
+}
+
+.carousel__navigation {
+  position: absolute;
+  left: 0;
+  right: 0;
+  // bottom: 0;
+  top: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  list-style: none;
+  margin: 0 auto;
+  padding: 20px 0;
+  z-index: 100;
+}
+
+.carousel__navigation-item{
+  height: min-content;
+}
+
+.carousel__navigation-link {
+  display: block;
+  // width: 40px;
+  width: 20px;
+  height: 5px;
+  flex: none;
+  background-color: rgba(0, 51, 255, 0.5);
+  border-radius: 2px;
+}
+
+.carousel__navigation-link--active {
+  background-color: $main-blue;
+  pointer-events: none;
+}
+
+.carousel__navigation-link:hover {
+  opacity: 0.7;
+}
+
+.carousel__navigation-link:active {
+  opacity: 0.5;
+}
+
+
+@media (min-width: $tablet-width) {
+  .carousel__wrapper {
+    height: 695px;
+  }
+}
+ 
+
+@media (min-width: $desktop-width) {
+
+  .carousel__wrapper {
+    height: 570px;
+  }
+}
+
+
+@media (max-width: $mobile-width-only) {
+
+  .carousel__control {
+    width: unset;
+    height: unset;
+
+    background-color: unset;
+    border-radius: unset; 
+  }
+
+  .carousel__control > svg {
+    display: none;
+  }
+
+}
+

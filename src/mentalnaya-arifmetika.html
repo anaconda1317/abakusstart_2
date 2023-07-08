@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="ru" class="page">
+
+@include('partials/head.html', {
+  "title": "Ментальная арифметика для детей от 4,5 лет в Красноярске | &laquo;СТАРТ&raquo;",
+  "description": "Запишите ребенка на занятия по ментальной арифметике в детский центр &laquo;СТАРТ&raquo;! Пробное занятие бесплатно! Стоимость урока от 900 руб.",
+  "site": "abakusstart.ru",
+})
+
+<body>
+  <div class="container">
+    @include('partials/header.html')
+    <main class="page-main">
+      @include('partials/common/title-visually-hidden.html',
+        "text": "Ментальная арифметика для детей в Красноярске | &laquo;СТАРТ&raquo;."
+      )
+      
+      @include('partials/common/banner-inner.html',{
+        "banner__slogan": 'Ментальная арифметика',
+        "banner__intro--inner": 'Хотите развивавать логическое мышление и&nbsp;творческие способности у&nbsp;вашего малыша? Тогда детский центр &laquo;Старт&raquo; может стать для него отправной точкой для мотивации двигаться и&nbsp;расти! Здесь дети получают много знаний и&nbsp;навыков.',
+      })
+      @include('partials/common/breadcrumbs.html',{
+        "oneLink": '/uslugi.php',
+        "oneTitle": 'Услуги',
+        "twoLink": '/mentalnaya-arifmetika.php',
+        "twoTitle": 'Ментальная арифметика',
+      })
+      @include('partials/uslugi/mentalnaya-arifmetika/main-article-uslugi.html')
+      @include('partials/uslugi/mentalnaya-arifmetika/popular.html')
+      @include('partials/uslugi/mentalnaya-arifmetika/order.html')
+      @include('partials/uslugi/mentalnaya-arifmetika/person-reviews.html')
+      @include('partials/common/post-social.html', {
+        'url': 'mentalnaya-arifmetika.php'
+      })
+    </main>
+
+
+    @include('partials/footer.html')
+    @include('partials/common/chat.html')
+    @include('partials/common/button-up.html')
+    @include('partials/uslugi/modal.html')
+    @include('partials/common/inner_json_article.html', {
+      "headline": "Для чего нужна ментальная арифметика?",
+      "image": "https://abakusstart.ru/img/mental_artical/mental-desktop@1x.jpg",
+      "description": "Хотите, чтобы ваш ребенок научился легко и быстро считать в уме и не только? Мы подготовили для вас топ-10 ответов на часто задаваемые вопросы. Надеемся, что эта статья поможет сделать выбор в пользу занятий ментальной арифметикой.",
+      "datepublished": "2023-04-26",
+      "@id": "https://abakusstart.ru/mentalnaya-arifmetika.php"
+    })
+    @include('partials/common/inner_json_product.html')
+
+       @include('partials/common/inner_json_local.html', {
+      "@context": "http://schema.org",
+      "@type": "LocalBusiness",
+      "additionalType": "AutoRental",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Красноярск",
+        "streetAddress": "ул. Мате Залки, 11"
+      },
+      "name": "Детский центр развития в Красноярске в Северном | &laquo;СТАРТ&raquo;.",
+      "email": "info@abakusstart.ru",
+      "openingHours": [
+        "Mo-Fr 10:00-18:00",
+        "Sa-Su 10:00-20:00"
+      ],
+      "priceRange": "500-2000RUB",
+      "telephone": [
+        "8 (908) 010-48-54"
+      ],
+      "image": "https://abakusstart.ru/img/logo-abakusstart-desktop.svg",
+        "url": "https://abakusstart.ru",
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": "56.064771",
+        "longitude": "92.941810"
+      }
+    })
+    @include('partials/common/inner_json_breadcrumbs.html', {
+      "position": 2,
+          "idValue": "https://abakusstart.ru/mentalnaya-arifmetika.php",
+          "name": "МЕНТАЛЬНАЯ АРИФМЕТИКА"
+    })
+    @include('partials/common/inner_json_raiting.html', {
+      "ratingValue": "4,9",
+      "bestRating": "5",
+      "ratingCount": "5"
+    })
+    <!-- @include('html/h1.html') пример include -->
+  </div>
+</body>
+
+</html>

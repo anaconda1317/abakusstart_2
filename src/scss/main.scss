@@ -1,0 +1,67 @@
+// базовые подключения
+@import "vars";
+@import "mixins";
+@import "fonts";
+@import "settings";
+
+// подключения компонентов страницы
+@import "./components/header";
+@import "./components/link";
+@import "./components/button";
+@import "./components/all-reasons";
+@import "./components/advantages";
+@import "./components/address";
+@import "./components/visually-hidden";
+@import "./components/container";
+@import "./components/page-main";
+@import "./components/page-header";
+@import "./components/main-nav";
+@import "./components/banner";
+@import "./components/features";
+@import "./components/all-reasons-list";
+@import "./components/reasons";
+@import "./components/site-list";
+@import "./components/reason";
+@import "./components/offer";
+@import "./components/button-up";
+@import "./components/page-footer";
+@import "./components/social";
+@import "./components/copyright";
+@import "./components/article";
+@import "./components/articles";
+@import "./components/video";
+@import "./components/map";
+@import "./components/news";
+@import "./components/form-chbx";
+@import "./components/form-contact";
+@import "./components/form-name";
+@import "./components/form-radio";
+@import "./components/feedback-form";
+@import "./components/pop-up";
+@import "./components/block-info";
+@import "./components/reviews";
+@import "./components/slider";
+@import "./components/post-social";
+@import "./components/reserv";
+@import "./components/block-error";
+@import "./components/modal";
+@import "./components/cards";
+@import "./components/card";
+@import "./components/breadcrumb";
+@import "./components/price";
+@import "./components/sub-menu";
+@import "./components/carousel";
+@import "./components/main-article";
+@import "./components/dotted-decoration";
+@import "./components/socials";
+@import "./components/profit";
+@import "./components/order";
+@import "./components/person-reviews";
+@import "./components/line-decoration";
+@import "./components/popular";
+@import "./components/tooltip";
+@import "./components/user";
+@import "./components/chat";
+@import "./components/swiper";
+
+

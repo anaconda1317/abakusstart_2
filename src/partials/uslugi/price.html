@@ -1,0 +1,52 @@
+<!-- ТАБЛИЦА ПРЕЙСКУРАНТ НАЧАЛО-->
+<section class="price">
+  <div class="price__wrapper">
+    <h2 class="visually-hidden">Цены на другие занятия: дошколенок, осмысленное чтение, подготовка к школе | &laquo;СТАРТ&raquo;.</h2>
+    <h3 class="price__header">Дополнительно</h3>
+    <div class="price__columns">
+      <table class="price__table">
+        @include('price/item.html', {
+          'col1': "1",
+          'col2': "Дошколенок",
+          'col3': "группа",
+          'col4': '500 <span class="price__rub">Р</span>/час',
+        })
+        @include('price/item.html', {
+          'col1': "2",
+          'col2': "Осмысленное чтение",
+          'col3': "индивидуально",
+          'col4': '600 <span class="price__rub">Р<span class="visually-hidden">руб.</span></span>/час',
+        })
+        @include('price/item.html', {
+          'col1': '3',
+          'col2': 'Логопед-дефектолог',
+          'col3': 'диагностика',
+          'col4': '1 300 <span class="price__rub">Р<span class="visually-hidden">руб.</span></span>',
+        })
+
+        @include('price/item.html', {
+          'col1': '4',
+          'col2': 'Нейропсихолог',
+          'col3': 'диагностика',
+          'col4': '2 000 <span class="price__rub">Р<span class="visually-hidden">руб.</span></span>',
+        })
+        @include('price/item.html', {
+          'col1': '5',
+          'col2': 'Подготовка к школе',
+          'col3': 'индивидуально',
+          'col4': '600 <span class="price__rub">Р<span class="visually-hidden">руб.</span></span>/час',
+        })
+        @include('price/item.html', {
+          'col1': '6',
+          'col2': 'Подготовка к школе',
+          'col3': 'группа',
+          'col4': '500 <span class="price__rub">Р<span class="visually-hidden">руб.</span></span>/час',
+        })
+
+
+      </table>
+      <p class="price__discount">С 10:00 до 20:00 в выходные</p>
+    </div>
+  </div>
+</section>
+<!-- ТАБЛИЦА ПРЕЙСКУРАНТ КОНЕЦ-->

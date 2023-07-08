@@ -1,0 +1,200 @@
+.offer {
+  font-family: $page-font;
+  text-transform: uppercase;
+  text-align: center;
+  // padding-bottom: 1px;
+}
+
+.offer__wrapper {
+  position: relative;
+  min-height: 323px;
+  padding-top: 37px;
+
+  background-color: #ffde03;
+
+  &::before {
+    content: " ";
+    position: absolute;
+    top: 0;
+
+    display: block;
+    width: 100%;
+    height: 37px;
+
+    background-image: url("../img/bg-triangle-white.svg");
+    background-repeat: no-repeat;
+    // transform: rotate(180deg);
+  }
+}
+
+
+.offer__question {
+  position: relative;
+
+  display: block;
+  width: 240px;
+  margin: 0 auto;
+  margin-bottom: 10px;
+  padding: 26px 0 5px 0;
+
+  font-size: 21px;
+  text-align: center;
+  line-height: 26px;
+  font-weight: 700;
+  color: $main-text-color;
+
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+.offer__question::after {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  width: 0;
+  content: ".";
+  color: transparent;
+  background: #000000;
+  height: 1px;
+  transition: all 0.5s;
+}
+
+.offer__question:hover::after {
+  width: 100%;
+}
+
+.offer__description {
+  width: 270px;
+  margin: 0 auto 35px;
+  padding: 0;
+
+  font-size: 14px;
+  line-height: 24px;
+  font-weight: normal;
+  color: $reasons-text;
+}
+
+.offer__open-search {
+  position: relative;
+
+  display: block;
+
+  width: 280px;
+  margin-bottom: 49px;
+
+  color: #ffde03;
+
+  background-color: $main-blue;
+  border: 1px $main-blue;
+  border-radius: 10px 0;
+
+  &:hover,
+  &:focus {
+    color: rgba(255, 255, 255, 0.7);
+
+    background-color: #0230eb;
+    border: 1px solid #ffde03;
+  }
+
+  &:active {
+    color: rgba(255, 255, 255, 0.7);
+
+    outline: none;
+    background-color: #0e39e3;
+    border: 1px solid rgba(255, 255, 255, 0.7);
+  }
+
+  &:disabled {
+    background-color: #e5e5e5;
+  }
+
+  &:hover .offer__icon-svg,
+  &:focus .offer__icon-svg {
+    fill: rgba(255, 255, 255, 0.7);
+  }
+
+  &:active .offer__icon-svg {
+    fill: rgba(255, 255, 255, 0.7);
+  }
+
+  &:visited .offer__icon-svg {
+    fill: rgba(255, 255, 255, 0.7);
+  }
+}
+
+.offer__icon-svg {
+  position: absolute;
+  top: 12px;
+  left: 18px;
+
+  cursor: pointer;
+}
+
+// .offer__open-search:hover .offer__icon-svg,
+// .offer__open-search:focus .offer__icon-svg
+//  {  fill: rgba(255, 255, 255, 0.7);
+// }
+
+// .offer__open-search:active .offer__icon-svg {
+//   fill: rgba(255, 255, 255, 0.7);
+// }
+
+// .offer__open-search:visited .offer__icon-svg {
+//   fill: rgba(255, 255, 255, 0.7);
+// }
+
+.offer__map {
+  width: 100%;
+  min-height: 350px;
+}
+
+@media (min-width: $tablet-width) {
+  .offer__wrapper {
+    min-height: 318px;
+    padding-top: 0;
+
+    &::before {
+      display: none;
+    }
+  }
+
+  .offer__open-search {
+    width: 458px;
+    // margin-bottom: 58px;
+  }
+
+  .offer__description {
+    width: 450px;
+    margin: 0 auto 42px auto;
+  }
+
+  .offer__question {
+    padding: 56px 0 10px 0;
+    width: 350px;
+    margin-bottom: 25px;
+
+    font-size: 30px;
+  }
+
+  .offer__icon-svg {
+    left: 80px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .offer__wrapper {
+    min-height: 331px;
+  }
+
+  .offer__description {
+    margin: 0 auto 47px auto;
+  }
+
+  .offer__open-search {
+    width: 458px;
+    // margin-bottom: 66px;
+  }
+}

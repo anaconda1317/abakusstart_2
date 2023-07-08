@@ -1,0 +1,41 @@
+<!-- организация разметка -->
+<script type="application/ld+json">
+  {
+      "@context": "http://schema.org",
+      "@type": "Organization",
+      "url": "@url",
+      "logo": "@logo",
+      "name": "@name",
+      "alternateName": "@alternateName",
+      "description": "@description",
+      "email": "@email",
+      "legalName": "@legalName",
+      "image": "@image",
+      "address": {
+
+        "@type": "PostalAddress",
+
+        "addressCountry": "RU",
+
+        "addressLocality": "@addressLocality",
+
+        "addressRegion": "@addressRegion",
+
+        "postalCode": "@postalCode",
+
+        "streetAddress": "@streetAddress"
+
+        },
+
+        "telephone": "@telephone",
+
+        "sameAs" : ["@sameAs"],
+
+        "contactPoint" : [
+          {  "@type" : "ContactPoint",
+            "telephone" : "@contactPoint.telephone",
+            "contactType" : "@contactPoint.contactType"
+          } ]
+
+  }
+</script>

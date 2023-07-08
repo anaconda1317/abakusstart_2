@@ -1,0 +1,44 @@
+.button {
+  display: block;
+  min-height: 58px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 15px;
+
+  border: none;
+
+  font-family: $page-font;
+  font-size: 21px;
+  line-height: 26px;
+  // color: #ffde03;
+  font-weight: 700;
+  text-transform: uppercase;
+  vertical-align: middle;
+
+
+  // background-color: $main-blue;
+  // border: 1px $main-blue;
+  cursor: pointer;
+
+  transition: border 0.1s linear, background-color 0.2s linear, color 0.2s linear;
+
+  // &:hover,
+  // &:focus {
+  //   color: rgba(255, 255, 255, 0.7);
+
+  //   background-color: #0230eb;
+  //   border: 1px solid #ffde03;
+  // }
+
+  // &:active {
+  //   color: rgba(255, 255, 255, 0.7);
+
+  //   outline: none;
+  //   background-color: #0e39e3;
+  //   border: 1px solid rgba(255, 255, 255, 0.7);
+  // }
+
+  // &:disabled {
+  //   background-color: #e5e5e5;
+  // }
+}

@@ -1,0 +1,67 @@
+.user {
+  font-family: "Lato","Arial",sans-serif;
+}
+
+.user__info {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  grid-template-areas:
+    "img name"
+    "img prof"
+    "img insta";
+  column-gap: 12px;
+}
+
+.user__photo {
+  grid-area: img;
+  border-radius: 50%;
+}
+
+.user__name {
+  grid-area: name;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+}
+
+.user__prof {
+  grid-area: prof;
+  font-size: 16px;
+  line-height: 18px;
+  color:#084446;
+  // color: #aaaaaa;
+}
+
+.user__insta {
+  grid-area: insta;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 18px;
+  // font-size: 14px;
+  // line-height: 16px;
+  color: #f9f9f9;
+  text-decoration: underline dashed 1px #f9f9f9;
+  transition: all 0.6s ease;
+}
+
+.user__insta:hover,
+.user__insta:focus {
+  opacity: .6;
+  text-decoration: none;
+  transition: all 0.6s ease;
+}
+
+.user__insta:active {
+  opacity: 1;
+  text-decoration: underline dashed 1px #f9f9f9;
+  transition: all 0.3s ease;
+}
+
+
+@media (min-width: $tablet-width) {
+  
+}
+
+@media (min-width: $desktop-width) {
+  
+}

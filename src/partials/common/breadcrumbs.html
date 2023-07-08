@@ -1,0 +1,24 @@
+<!-- breadcump start-->
+<nav class="breadcrumb" aria-label="Хлебные крошки" data-role="breadcrumb">
+  <div class="breadcrumb__wrapper">
+    <ul class="breadcrumb-list">
+      <h2 class="visually-hidden">Навигация по сайту</h2>
+      <li class="breadcrumb-item"><a class="breadcrumb-list__link" href="/index.php">Главная</a></li>
+      <li class="breadcrumb-item">
+        @if(twoLink !== '' && twoTitle !== ''){
+          <a class="breadcrumb-list__link" href="@oneLink">@oneTitle</a>
+        }
+        @if(twoLink === '' && twoTitle === ''){
+          <span aria-current="page">
+            <a class="breadcrumb-list__link" href="@oneLink">@oneTitle</a>
+          </span>
+        }
+
+      </li>
+      @if(twoLink !== '' && twoTitle !== ''){
+        <li class="breadcrumb-item"><span aria-current="page"><a class="breadcrumb-list__link" href="@twoLink">@twoTitle</a></span></li>
+      }
+    </ul>
+</div>
+</nav>
+<!-- breadcump finish-->

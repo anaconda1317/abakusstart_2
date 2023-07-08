@@ -1,0 +1,33 @@
+.page-footer {
+  display: flex;
+  flex-direction: column;
+  height: 400px;
+  // height: 320px;
+  // height: 254px;
+  padding-top: 1px;
+
+  text-transform: uppercase;
+  font-family: $page-font;
+  text-align: center;
+  color: $main-text-color;
+}
+
+@media (min-width: $tablet-width) {
+  .page-footer {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    // height: 140px;
+    height: 175px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .page-footer {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    height: 180px;
+  }
+}
