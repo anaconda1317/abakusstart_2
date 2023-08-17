@@ -25,8 +25,8 @@
   <link rel="icon" type="image/png" href="img/icon/favicon-16x16.png" sizes="16x16">
   <link rel="preload" href="fonts/ptsans.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="fonts/ptsansbold.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="stylesheet" href="css/vendor.css">
-  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="./css/vendor.css">
+  <link rel="stylesheet" href="./css/main.css">
   <script>
     document.createElement("picture");
   </script>
@@ -51,7 +51,7 @@
               <a class="site-list__link" href="/uslugi.php" aria-current="page" aria-haspopup="true" aria-expanded="false" role="menuitem">Услуги центра</a>
               <span class="sub-menu__ikon-wrapper">
                 <svg class="sub-menu__ikon" width="25.667" height="15" fill="#000000">
-                  <use xlink:href="#sp-icon-arrow_sub-menu"></use></svg>
+                  <use xlink:href="./img/sprite.svg#sp-icon-arrow_sub-menu"></use></svg>
               </span>
             </div>
             <!-- start sub-menu -->
@@ -61,7 +61,7 @@
                     <a class="sub-menu__item-link" href="/mentalnaya-arifmetika.php" role="menuitem">Ментальная арифметика
                       <!-- ikon start abacus-->
                         <svg class="sub-menu__item-link-svg" fill="#4b7324" width="47" height="40" viewBox="0 0 47 40">
-                          <use xlink:href="#sp-abacus_uslugi_icon"></use>
+                          <use xlink:href="./img/sprite.svg#sp-abacus_uslugi_icon"></use>
                         </svg>
                       <!-- ikon finish -->
                     </a>
@@ -70,7 +70,7 @@
                     <a class="sub-menu__item-link" href="/info.php" role="menuitem">Робототехника
                       <!-- ikon start robot-->
                       <svg class="sub-menu__item-link-svg" fill="#401c8c" width="47" height="40" viewBox="0 0 47 40">
-                        <use xlink:href="#sp-robototehnica_uslugi_icon"></use>
+                        <use xlink:href="./img/sprite.svg#sp-robototehnica_uslugi_icon"></use>
                       </svg>
                       <!-- ikon finish -->
                     </a>
@@ -79,7 +79,7 @@
                     <a class="sub-menu__item-link" href="/info.php" role="menuitem">Репетитор 1-4 классов
                       <!-- ikon start repetitor-->
                       <svg class="sub-menu__item-link-svg" fill="#038c8c" width="47" height="40" viewBox="0 0 47 40">
-                        <use xlink:href="#sp-repetitor_uslugi_icon"></use>
+                        <use xlink:href="./img/sprite.svg#sp-repetitor_uslugi_icon"></use>
                       </svg>
                       <!-- ikon finish -->
                     </a>
@@ -88,7 +88,7 @@
                     <a class="sub-menu__item-link" href="/info.php" role="menuitem">Логопед-дефектолог
                       <!-- ikon start logoped-defektolog-->
                       <svg class="sub-menu__item-link-svg" fill="#d90d58" width="47" height="40" viewBox="0 0 47 40">
-                        <use xlink:href="#sp-logoped_uslugi_icon"></use>
+                        <use xlink:href="./img/sprite.svg#sp-logoped_uslugi_icon"></use>
                       </svg>
                       <!-- ikon finish -->
                     </a>
@@ -97,7 +97,7 @@
                     <a class="sub-menu__item-link" href="/info.php" role="menuitem">Анлийский язык
                       <!-- ikon start english-->
                       <svg class="sub-menu__item-link-svg" fill="#02734a" width="47" height="40" viewBox="0 0 47 40">
-                        <use xlink:href="#sp-english_1_uslugi_icon"></use>
+                        <use xlink:href="./img/sprite.svg#sp-english_1_uslugi_icon"></use>
                       </svg>
                       <!-- ikon finish -->
                     </a>
@@ -106,7 +106,7 @@
                     <a class="sub-menu__item-link" href="/info.php" role="menuitem">Нейропсихолог
                       <!-- ikon start nejropsiholog-->
                       <svg class="sub-menu__item-link-svg" fill="#d94ab3" width="47" height="40" viewBox="0 0 47 40">
-                        <use xlink:href="#sp-neiropsiho_uslugi_icon"></use>
+                        <use xlink:href="./img/sprite.svg#sp-neiropsiho_uslugi_icon"></use>
                       </svg>
                       <!-- ikon finish -->
                     </a>
@@ -115,7 +115,7 @@
                     <a class="sub-menu__item-link" href="/info.php" role="menuitem">Психотерапевт
                       <!-- ikon start psihoterapevt-->
                       <svg class="sub-menu__item-link-svg" fill="#0b9ed9" width="47" height="40" viewBox="0 0 47 40">
-                        <use xlink:href="#sp-psiho_uslugi_icon"></use>
+                        <use xlink:href="./img/sprite.svg#sp-psiho_uslugi_icon"></use>
                       </svg>
                       <!-- ikon finish -->
                     </a>
@@ -124,7 +124,7 @@
                     <a class="sub-menu__item-link" href="/info.php" role="menuitem">Каллиграфия
                     <!-- ikon start kalligrafiya-->
                     <svg class="sub-menu__item-link-svg" fill="#e02b40" width="47" height="40" viewBox="0 0 47 40">
-                      <use xlink:href="#sp-calligraphiya_uslugi_icon"></use>
+                      <use xlink:href="./img/sprite.svg#sp-calligraphiya_uslugi_icon"></use>
                     </svg>
                     <!-- ikon finish -->
                   </a>
@@ -133,7 +133,40 @@
               </div>
           </li>
             <!-- finish sub-menu -->
-          <li class="site-list__item"><a class="site-list__link" href="/info.php" role="menuitem">Новости и акции</a></li>
+   <!-- site-list__item with sub-menu_1 -->
+   <li class="site-list__item">
+    <div class="site-list__item site-list__item--has-children">
+      <a class="site-list__link site-list__link--news" href="#" aria-current="page" aria-haspopup="true" aria-expanded="false" role="menuitem">Новости и акции</a>
+      <span class="sub-menu__ikon-wrapper sub-menu__ikon-wrapper--news">
+        <svg class="sub-menu__ikon" width="25.667" height="15" fill="#000000">
+          <use xlink:href="./img/sprite.svg#sp-icon-arrow_sub-menu"></use></svg>
+      </span>
+    </div>
+    <!-- start sub-menu_1-->
+      <div class="sub-menu__wrapper">
+        <ul class="sub-menu" role="menu">
+          <li class="sub-menu__item" style="animation-delay: 0.1s;">
+            <a class="sub-menu__item-link" href="/info.php" role="menuitem">Новости
+              <!-- ikon start news-->
+                <svg class="sub-menu__item-link-svg" fill="#22BABB" width="47" height="40" viewBox="0 0 47 40">
+                  <use xlink:href="./img/sprite.svg#sp-news_sub-menu_icon"></use>
+                </svg>
+              <!-- ikon finish -->
+            </a>
+          </li>
+          <li class="sub-menu__item" style="animation-delay: 0.13s;">
+            <a class="sub-menu__item-link" href="/info.php" role="menuitem">Акции
+              <!-- ikon start actions-->
+              <svg class="sub-menu__item-link-svg" fill="#FA7F08" width="47" height="40" viewBox="0 0 47 40">
+                <use xlink:href="./img/sprite.svg#sp-action_sub-menu_icon"></use>
+              </svg>
+              <!-- ikon finish -->
+            </a>
+          </li>
+        </ul>
+      </div>
+  </li>
+    <!-- finish sub-menu_1-->
           <li class="site-list__item"><a class="site-list__link" href="/info.php" >Фото и видео</a></li>
         </ul>
     </div>
@@ -517,7 +550,7 @@
         <a class="social__link" href="#">
           <span class="visually-hidden">Фейсбук детского центра развития «СТАРТ» в Красноярске, в Советском районе.</span>
           <svg class="social__link-svg social__link-svg--fb" width="9" height="19" fill="#fff">
-            <use xlink:href="img/sprite.svg#sp-icon-facebook"></use>
+            <use xlink:href="./img/sprite.svg#sp-icon-facebook"></use>
           </svg></a>
       </li>
     </ul>
@@ -526,8 +559,8 @@
     <b class="copyright__text">Разработано</b>
     <a class="copyright__link" href="#">
       <span class="visually-hidden">Ссылка на сайт дизайн-студии Mandarin.</span>
-      <svg class="copyright__link-svg" width="27" height="29" fill="#ff00ff">
-        <use xlink:href="img/sprite.svg#sp-logo-mandarin-studio"></use>
+      <svg class="copyright__link-svg" width="27" height="29" fill="#F48120">
+        <use xlink:href="./img/sprite.svg#sp-logo-mandarin-studio"></use>
       </svg>
     </a>
     <div>
@@ -684,7 +717,7 @@
   }
 </script>
 
-  <!-- логотип_разметка -->
+  <!-- логотип_разметка
 
 <script type="application/ld+json">
   {
@@ -693,7 +726,7 @@
     "url": "https://abakusstart.ru",
     "logo": "https://abakusstart.ru/img/logo-abakusstart-desktop.svg"
   }
-</script>
+</script> -->
 
 </body>
 

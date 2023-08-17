@@ -3,7 +3,7 @@
 
 @include('partials/head.html', {
   "title": "Ментальная арифметика для детей от 4,5 лет в Красноярске | &laquo;СТАРТ&raquo;",
-  "description": "Запишите ребенка на занятия по ментальной арифметике в детский центр &laquo;СТАРТ&raquo;! Пробное занятие бесплатно! Стоимость урока от 900 руб.",
+  "description": "Ментальная арифметика для детей. Запишите ребенка на занятия! ✆ 8 908 010 4854. Пробное занятие бесплатно! Проверенные методики с опытными преподавателями. Стоимость урока от 900 руб.",
   "site": "abakusstart.ru",
 })
 
@@ -47,34 +47,13 @@
       "valueId": "https://abakusstart.ru/mentalnaya-arifmetika.php"
     })
     @include('partials/common/inner_json_product.html')
-
-       @include('partials/common/inner_json_local.html', {
-      "@context": "http://schema.org",
-      "@type": "LocalBusiness",
-      "additionalType": "AutoRental",
-      "address": {
-        "@type": "PostalAddress",
-        "addressLocality": "Красноярск",
-        "streetAddress": "ул. Мате Залки, 11"
-      },
+    @include('partials/common/inner_json_local.html', {
       "name": "Детский центр развития в Красноярске в Северном | &laquo;СТАРТ&raquo;.",
-      "email": "info@abakusstart.ru",
-      "openingHours": [
-        "Mo-Fr 10:00-18:00",
-        "Sa-Su 10:00-20:00"
-      ],
+      "email": "info@abakusstart.ru",     
       "priceRange": "500-2000RUB",
-      "telephone": [
-        "8 (908) 010-48-54"
-      ],
+      "telephone": "8 (908) 010-48-54",
       "image": "https://abakusstart.ru/img/logo-abakusstart-desktop.svg",
-        "url": "https://abakusstart.ru",
-      "geo": {
-        "@type": "GeoCoordinates",
-        "latitude": "56.064771",
-        "longitude": "92.941810"
-      }
-    })
+        "url": "https://abakusstart.ru",})
     @include('partials/common/inner_json_breadcrumbs.html', {
       "position": 2,
           "idValue": "https://abakusstart.ru/mentalnaya-arifmetika.php",

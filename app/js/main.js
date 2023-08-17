@@ -106,7 +106,8 @@ const swiper = new swiper__WEBPACK_IMPORTED_MODULE_1__["default"]('.carousel-swi
   navigation: {
     nextEl: '.swiper-button-next',
     prevEl: '.swiper-button-prev'
-  }
+  },
+  setTransition: 20000
 });
 
 // Подключение анимаций по скроллу

@@ -38,8 +38,7 @@
 
 .popular__title {
   margin: 0;
-  margin-bottom: 1.25rem; 
-  padding-left: 25px;
+  margin-bottom: 1.25rem;  
   font-weight: 600;
   font-size: 19px;
   // font-size: 28px;
@@ -214,6 +213,7 @@
   }
   
   .popular__title {
+    padding-left: 25px;
     text-align: left;
   } 
 }

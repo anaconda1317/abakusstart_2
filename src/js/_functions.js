@@ -65,6 +65,7 @@ const swiper = new Swiper('.carousel-swiper', {
     nextEl: '.swiper-button-next',
     prevEl: '.swiper-button-prev',
   },
+  setTransition: 20000
 });
 
 // Подключение анимаций по скроллу
