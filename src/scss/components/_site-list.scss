@@ -48,11 +48,11 @@
 }
 
 
-.site-list__item:not(.__show_dropdown_sub) .sub-menu{
+.site-list__item:not(.__show_dropdown_sub) .sub-menu {
   display: none; 
 }
 
-.site-list__item:not(.__show_dropdown_sub) .sub-menu__wrapper{
+.site-list__item:not(.__show_dropdown_sub) .sub-menu__wrapper {
   display: none;
 }
 
@@ -60,19 +60,19 @@
   display: flex;
 }
 
-.site-list__item.__show_dropdown_sub .sub-menu__wrapper{
+.site-list__item.__show_dropdown_sub .sub-menu__wrapper {
   display: block;
 }
 
-.site-list__item.__show_dropdown_sub .sub-menu__ikon-wrapper svg{
+.site-list__item.__show_dropdown_sub .sub-menu__ikon-wrapper svg {
   transform: rotate(0deg);
 }
 
-.site-list__item.__show_dropdown_sub .sub-menu__ikon-wrapper svg{
+.site-list__item.__show_dropdown_sub .sub-menu__ikon-wrapper svg {
   fill: #ffde03;
 }
 
-.site-list__item:not(.__show_dropdown_sub) .sub-menu__ikon-wrapper svg{  
+.site-list__item:not(.__show_dropdown_sub) .sub-menu__ikon-wrapper svg {  
   transform: rotate(180deg);
 }
 
@@ -165,19 +165,19 @@
     background: $main-blue;
     height: 1px;
     // transition: all .5s;
-    transition: width .65s;
-    transition-delay: .75s;
+    transition: width .65s ease-in-out;
+    transition-delay: .75s ease-in-out;
   }
   
   .site-list__item .site-list__link:hover::after {
     width: 100%;
   }
 
-  .site-list__item .sub-menu{
+  .site-list__item .sub-menu {
     display: none;
   }
 
-  .site-list__item .sub-menu__wrapper{
+  .site-list__item .sub-menu__wrapper {
     display: block;
   }
 
@@ -197,7 +197,7 @@
     display: flex;
   }
 
-  .site-list__item.__show_dropdown_sub  .sub-menu__wrapper{
+  .site-list__item.__show_dropdown_sub  .sub-menu__wrapper {
     display: block;
   }
 
@@ -219,7 +219,7 @@
     // letter-spacing: -.1px;
   }
 
-  .site-list__item.__show_dropdown_sub .sub-menu__wrapper  {
+  .site-list__item.__show_dropdown_sub .sub-menu__wrapper {
     padding-top: 15px;
     background-color: transparent;
   }
@@ -261,7 +261,7 @@
   display: flex;
   border-radius: 8px;
   // border: 1px solid #c7c5c5;
-  transition: all 500ms;
+  transition: all 500ms ease-in-out;
 }
 
   .site-list > li:hover .sub-menu__wrapper {

@@ -21,6 +21,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _components_chat__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_components_chat__WEBPACK_IMPORTED_MODULE_4__);
 /* harmony import */ var _components_button__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./components/button */ "./src/js/components/button.js");
 /* harmony import */ var _components_button__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(_components_button__WEBPACK_IMPORTED_MODULE_5__);
+/* harmony import */ var _components_smallHeadline__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./components/smallHeadline */ "./src/js/components/smallHeadline.js");
+/* harmony import */ var _components_smallHeadline__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(_components_smallHeadline__WEBPACK_IMPORTED_MODULE_6__);
+
 
 
 
@@ -38,14 +41,13 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _functions_mobile_check__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./functions/mobile-check */ "./src/js/functions/mobile-check.js");
-/* harmony import */ var swiper__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! swiper */ "./node_modules/swiper/swiper.esm.js");
+/* harmony import */ var swiper__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! swiper */ "./node_modules/swiper/swiper.esm.js");
 // Данный файл - лишь собрание подключений готовых компонентов.
 // Рекомендуется создавать отдельный файл в папке components и подключать все там
 
 // Определение операционной системы на мобильных
-
-console.log((0,_functions_mobile_check__WEBPACK_IMPORTED_MODULE_0__.mobileCheck)());
+// import { mobileCheck } from "./functions/mobile-check";
+// console.log(mobileCheck())
 
 // Определение ширины экрана
 // import { isMobile, isTablet, isDesktop } from './functions/check-viewport';
@@ -93,8 +95,8 @@ console.log((0,_functions_mobile_check__WEBPACK_IMPORTED_MODULE_0__.mobileCheck)
 
 // Подключение свайпера
 
-swiper__WEBPACK_IMPORTED_MODULE_1__["default"].use([swiper__WEBPACK_IMPORTED_MODULE_1__.Navigation, swiper__WEBPACK_IMPORTED_MODULE_1__.Pagination]);
-const swiper = new swiper__WEBPACK_IMPORTED_MODULE_1__["default"]('.carousel-swiper', {
+swiper__WEBPACK_IMPORTED_MODULE_0__["default"].use([swiper__WEBPACK_IMPORTED_MODULE_0__.Navigation, swiper__WEBPACK_IMPORTED_MODULE_0__.Pagination]);
+const swiper = new swiper__WEBPACK_IMPORTED_MODULE_0__["default"]('.carousel-swiper', {
   direction: 'horizontal',
   slidesPerView: 1,
   grabCursor: true,
@@ -109,6 +111,30 @@ const swiper = new swiper__WEBPACK_IMPORTED_MODULE_1__["default"]('.carousel-swi
   },
   setTransition: 20000
 });
+if (window.innerWidth <= 480) {
+  const swiperPopular = new swiper__WEBPACK_IMPORTED_MODULE_0__["default"]('.carousel-swiper--popular', {
+    direction: 'horizontal',
+    slidesPerView: 1,
+    grabCursor: true,
+    loop: true,
+    pagination: {
+      el: '.swiper-pagination',
+      clickable: true
+    },
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev'
+    },
+    setTransition: 20000
+  });
+}
+if (window.innerWidth > 480) {
+  if (document.querySelectorAll('.popular__list').length > 0) {
+    document.querySelectorAll('.popular__list').forEach(el => {
+      el.classList.add('not-mobile');
+    });
+  }
+}
 
 // Подключение анимаций по скроллу
 // import AOS from 'aos';
@@ -196,6 +222,15 @@ document.addEventListener('DOMContentLoaded', () => {
     };
   }
 });
+
+// const scrollToTopButton = document.querySelector('.scroll-to-top');
+
+// scrollToTopButton.addEventListener('click', () => {
+//   window.scrollTo({
+//     top: 0,
+//     behavior: 'smooth',
+//   });
+// });
 
 /***/ }),
 
@@ -820,6 +855,45 @@ window.addEventListener('load', function () {
 
 /***/ }),
 
+/***/ "./src/js/components/smallHeadline.js":
+/*!********************************************!*\
+  !*** ./src/js/components/smallHeadline.js ***!
+  \********************************************/
+/***/ (() => {
+
+// Получаем элементы, с которыми будем работать
+const smallHeadline = document.querySelectorAll('.main-article__small-headline');
+const hideObject = document.querySelectorAll('.main-article__small-headline._hide-object');
+const showClass = '_show-object';
+const hideClass = '_hide-object';
+
+// Функция для проверки, находится ли элемент в зоне видимости
+function isElementInViewport(element) {
+  const rect = element.getBoundingClientRect();
+  return rect.top >= 0 && rect.left >= 0 && rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) && rect.right <= (window.innerWidth || document.documentElement.clientWidth);
+}
+
+// Функция для обработки события прокрутки
+function handleScroll() {
+  smallHeadline.forEach((el, key) => {
+    if (isElementInViewport(hideObject[key])) {
+      el.classList.add(showClass);
+      el.classList.remove(hideClass);
+    } else {
+      el.classList.remove(showClass);
+      el.classList.add(hideClass);
+    }
+  });
+}
+
+// Навешиваем обработчик события прокрутки на объект window
+window.addEventListener('scroll', handleScroll);
+
+// Вызываем функцию при загрузке страницы, чтобы определить начальное состояние
+handleScroll();
+
+/***/ }),
+
 /***/ "./src/js/components/tooltip.js":
 /*!**************************************!*\
   !*** ./src/js/components/tooltip.js ***!
@@ -843,34 +917,6 @@ window.addEventListener('load', function () {
     // }
   }
 });
-
-/***/ }),
-
-/***/ "./src/js/functions/mobile-check.js":
-/*!******************************************!*\
-  !*** ./src/js/functions/mobile-check.js ***!
-  \******************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   mobileCheck: () => (/* binding */ mobileCheck)
-/* harmony export */ });
-/* harmony import */ var _vars__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../_vars */ "./src/js/_vars.js");
-
-const mobileCheck = () => {
-  const userAgent = navigator.userAgent || navigator.vendor || window.opera;
-  if (/android/i.test(userAgent)) {
-    _vars__WEBPACK_IMPORTED_MODULE_0__["default"].htmlEl.classList.add('page--android');
-    return "Android";
-  }
-  if (/iPad|iPhone|iPod/.test(userAgent) && !window.MSStream) {
-    _vars__WEBPACK_IMPORTED_MODULE_0__["default"].htmlEl.classList.add('page--ios');
-    return "iOS";
-  }
-  return "unknown";
-};
 
 /***/ }),
 
@@ -13834,6 +13880,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _vars__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./_vars */ "./src/js/_vars.js");
 /* harmony import */ var _functions__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./_functions */ "./src/js/_functions.js");
 /* harmony import */ var _components__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./_components */ "./src/js/_components.js");
+
+
 
 
 

@@ -2,8 +2,8 @@
 // Рекомендуется создавать отдельный файл в папке components и подключать все там
 
 // Определение операционной системы на мобильных
-import { mobileCheck } from "./functions/mobile-check";
-console.log(mobileCheck())
+// import { mobileCheck } from "./functions/mobile-check";
+// console.log(mobileCheck())
 
 // Определение ширины экрана
 // import { isMobile, isTablet, isDesktop } from './functions/check-viewport';
@@ -67,6 +67,35 @@ const swiper = new Swiper('.carousel-swiper', {
   },
   setTransition: 20000
 });
+
+if (window.innerWidth <= 480) {
+const swiperPopular = new Swiper('.carousel-swiper--popular', {
+  direction: 'horizontal',
+  slidesPerView: 1,
+  grabCursor: true,
+  loop: true,
+  pagination: {
+    el: '.swiper-pagination',
+    clickable: true,
+  },
+  navigation: {
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev',
+  },
+  setTransition: 20000
+});
+}
+
+ 
+  if (window.innerWidth > 480){
+    
+    if(document.querySelectorAll('.popular__list').length > 0){
+      document.querySelectorAll('.popular__list').forEach(el => {
+
+         el.classList.add('not-mobile');
+      })
+    }
+  }
 
 // Подключение анимаций по скроллу
 // import AOS from 'aos';
