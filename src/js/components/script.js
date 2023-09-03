@@ -85,17 +85,27 @@ document.addEventListener('DOMContentLoaded', function(){
 
       });
 
-    }
-    close.addEventListener("click", function (evt) {
+    }  
 
+    // let timeClose = 500; время для отработки анимации
+    close.addEventListener("click", function (evt) {
+      let timeClose = 500;
       evt.preventDefault();
 
       if(overlay){
-
-        overlay.classList.remove('modal__shadow')
+        modalButton.setAttribute('disabled', 'disabled');
+        setTimeout(()=>{ 
+          overlay.classList.remove('modal__shadow');
+        }, timeClose)
+       
       }
+      setTimeout(()=>{
+        popup.classList.remove('__modal__closed');
+      }, timeClose)
       name.value = '';
       tel.value = '';
+      popup.classList.add('__modal__closed');
+
       popup.classList.remove("modal-show");
       popup.classList.remove("modal-error");
     });

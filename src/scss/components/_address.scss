@@ -43,11 +43,12 @@
 
     &:focus,
     &:hover {
-        color: $main-blue;
+        color: #0230eb;
     }
   
     &:active {
-        color: #f6921e;
+        color: $main-blue;
+        text-decoration: underline;
     }
   }
 
@@ -70,11 +71,11 @@
   
   .adress__link:focus .adress__link-svg,
   .adress__link:hover .adress__link-svg {
-    fill: $main-blue;
+    fill: #0230eb;
   }
   
   .adress__link:active .adress__link-svg {
-    fill: #f6921e ; 
+    fill: $main-blue; 
   }
   
   

@@ -11,7 +11,7 @@
     "backend": "gulp backend",
     "zip": "gulp zip",
     "code": "editorconfig-checker",
-    "svgSprive": "gulp svgSprive"
+    "svgSprive": "gulp svgSprites"
   },
   "author": "MaxGraph",
   "license": "ISC",

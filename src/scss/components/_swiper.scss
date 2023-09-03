@@ -26,6 +26,7 @@
   box-sizing: content-box;
   transition-duration: 0.3s; /* Продолжительность анимации */
   transition-timing-function: ease-in-out; /* Функция времени для анимации */
+  // transition: transform 0.5s ease-in-out; /* Добавляем анимацию для перехода между слайдами */  
 }
 
 .swiper-slide {
@@ -35,12 +36,18 @@
   position: relative;
   transition-property: transform;
   display: block;
+  // opacity: 0;/* Скрываем все слайды, кроме активного */
+  pointer-events: none;
+  transition: opacity 0.5s ease-in-out;
 }
 
 /* Добавляем стили для анимации активного слайда */
 .swiper-slide-active {
   transform: scale(1.05); /* Например, увеличиваем активный слайд немного */
   transition: transform 0.3s ease-in-out;
+  
+  // opacity: 1;/* Показываем активный слайд */
+  pointer-events: auto;
 }
 
 .swiper-pagination {
@@ -72,6 +79,11 @@
   -webkit-box-flex: 0;
   border-radius: 2px;
   transition: background-color 0.3s ease-in-out;
+    /* Добавляем стили для анимации при наведении на точку пагинации */
+    // &:hover {
+    //   transform: scale(1.2); /* Например, увеличиваем размер при наведении */
+    //   transition: transform 0.3s ease-in-out;
+    // }
 }
 
 .swiper-pagination-bullet {
@@ -108,4 +120,11 @@
   .swiper-slide .person-reviews__item-wrapper {
     padding: 10px 25px 20px; 
   } 
+
+  /* Добавляем стили для анимации при наведении на точку пагинации */
+  .swiper-pagination-bullet:hover {
+    transform: scale(1.2); /* Например, увеличиваем размер при наведении */
+    transition: transform 0.3s ease-in-out;
+  }
+
 }

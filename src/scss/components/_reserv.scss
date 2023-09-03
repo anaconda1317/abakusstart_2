@@ -11,41 +11,34 @@
 
 .reserv__text {
   position: relative;
-
   display: block;
   width: 310px;
   padding: 0;
   margin: 0 auto;
-
   color: #aaaaaa;
   text-transform: none;
-
-  text-decoration: none;
-  color: inherit;
-  cursor: default;
+  text-decoration: none; /* Убирает подчеркивание */
   border-top: 1px solid #aaaaaa;
+  cursor: default; /* Стандартный курсор */
 
-  &:hover {
-    cursor: pointer;
-  }
-
-  &::after {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    margin: auto;
-    width: 0;
-    content: ".";
-    color: transparent;
-    background: #aaaaaa;
-    height: 1px;
-    transition: all .5s;
-  }
-  
   &:hover::after {
-    width: 100%;
+    width: 100%;/* Для ::after при наведении устанавливаем подчеркивание */
   }
+}
+
+.reserv__text::after {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  width: 0;
+  content: ".";
+  color: transparent;
+  background: #aaaaaa;
+  height: 1px;
+  transition: all .5s;
+  -webkit-transition: all .5s;
 }
 
 

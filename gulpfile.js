@@ -79,7 +79,11 @@ const svgSprites = () => {
     )
     .pipe(
       cheerio({
-        run: function ($) {},
+        run: function ($) {
+            $('[fill]').removeAttr('fill');
+            $('[stroke]').removeAttr('stroke');
+            $('[style]').removeAttr('style');
+        },
         parserOptions: {
           xmlMode: true
         },

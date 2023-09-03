@@ -6,7 +6,12 @@
 
   .tooltip dfn {
     font-style: normal;
-    text-decoration: underline 2px dashed #00A0AE;
+    -webkit-text-decoration-line: underline;
+    -webkit-text-decoration-color: #00A0AE;
+    -webkit-text-decoration-style: dashed;
+    text-decoration-line: underline;
+    text-decoration-color: #00A0AE;
+    text-decoration-style: dashed;
     text-underline-offset: 4px;
 }
 
