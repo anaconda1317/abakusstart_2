@@ -7,7 +7,7 @@
   "site": "abakusstart.ru",
 })
 
-<body data-page="mental">
+<body data-page="news">
   <div class="container">
     @include('partials/header.html')
     <main class="page-main">
@@ -25,6 +25,8 @@
         "twoLink": '/mentalnaya-arifmetika.php',
         "twoTitle": 'Ментальная арифметика',
       })
+      @include('partials/novosti/dropdown.html')
+      @include('partials/novosti/newsdrop.html')
       @include('partials/uslugi/mentalnaya-arifmetika/main-article-uslugi.html')
       @include('partials/uslugi/mentalnaya-arifmetika/order.html')
       @include('partials/uslugi/mentalnaya-arifmetika/person-reviews.html')

@@ -27,6 +27,7 @@
   transition-duration: 0.3s; /* Продолжительность анимации */
   transition-timing-function: ease-in-out; /* Функция времени для анимации */
   // transition: transform 0.5s ease-in-out; /* Добавляем анимацию для перехода между слайдами */  
+  scroll-behavior: smooth; 
 }
 
 .swiper-slide {
@@ -94,6 +95,12 @@
   background-color: #0033ff;
 }
 
+  /* Добавляем стили для анимации при наведении на точку пагинации */
+  .swiper-pagination-bullet:hover {
+    transform: scale(1.2); /* Например, увеличиваем размер при наведении */
+    transition: transform 0.3s ease-in-out;
+  }
+
 .swiper-slide {
   text-align: center;
   display: flex;
@@ -121,10 +128,14 @@
     padding: 10px 25px 20px; 
   } 
 
-  /* Добавляем стили для анимации при наведении на точку пагинации */
-  .swiper-pagination-bullet:hover {
-    transform: scale(1.2); /* Например, увеличиваем размер при наведении */
-    transition: transform 0.3s ease-in-out;
+  .carousel-swiper--popular .popular__item-link:hover,
+  .carousel-swiper--popular .popular__item-link:focus {
+  opacity: 0.7;
+  // text-decoration: underline;
+  }
+
+  .carousel-swiper--popular .popular__item-link:active {
+    opacity: 0.5;
   }
 
 }

@@ -142,12 +142,13 @@
     }
   }
 
-  .site-list__link--active {
+  .site-list__link--active, 
+  .site-list__link--active>a,
+  .site-list__link--active .site-list__item--has-children>a{
     color: #ff5722;
-
     cursor: pointer;
   }
-
+  
 
   .site-list__item .site-list__link {
     position: relative;

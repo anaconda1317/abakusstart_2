@@ -5,3 +5,6 @@ import './components/tooltip';
 import './components/chat';
 import './components/button';
 import './components/smallHeadline';
+import './components/preloader';
+import './components/setActivMenu';
+

@@ -1,0 +1,129 @@
+// .__hidden {
+//   display:none;
+// }
+
+// .__show {
+//   display: block;
+// }
+.dropdown {
+  position: relative;
+  margin: 0 auto;
+   width: auto;
+}
+
+.dropdown__container {
+  width: 320px;
+}
+
+.dropdown__wrapper {
+  position: relative; 
+ 
+  // margin-left: auto;
+  // margin-right: 15px;
+  
+}
+
+.dropdown__menu {
+  @include list-reset();
+  position: absolute;
+  top: 30px;
+  left: 0;
+  z-index: 1;
+  // width: 140px;  
+  width: 290px;  
+  margin: 0;
+  padding: 12px 16px;
+  background: rgba(0, 0, 0, 0.6);
+  border-radius: 4px;
+  // // box-sizing: border-box;
+  display: none;
+
+}
+
+.dropdown-menu-open {
+  display: block;
+}
+
+.dropdown__menu-item {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.dropdown__menu-item::before {
+  content: "";
+  width: 16px;
+  height: 16px;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.dropdown__menu-item__mental::before {
+  background-image: url("./img/sprite.svg#sp-calligraphiya_uslugi_icon");
+}
+
+.dropdown__toggle-button {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 3px 16px;
+  font-family: inherit;
+  font-size: 12px;
+  line-height: 16px;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: $main-blue;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+
+  &:focus,
+  &:hover {
+    opacity: 0.7;
+  }
+
+  &:active {
+    opacity: 0.5;
+  }
+
+  &::before {
+    content: "";
+    width: 16px;
+    height: 16px;
+    background-image: url("./img/sprite.svg#sp-calligraphiya_uslugi_icon");
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+  
+  &::after {
+    content: "";
+    width: 8px;
+    height: 4px;
+    background-image: url("./img/sprite.svg#sp-calligraphiya_uslugi_icon");
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+}
+
+
+// .dropdown__toggle-button::before {
+//   content: "";
+//   width: 16px;
+//   height: 16px;
+//   background-image: url("./img/sprite.svg#sp-calligraphiya_uslugi_icon");
+//   background-position: center;
+//   background-repeat: no-repeat;
+// }
+
+// .dropdown__toggle-button::after {
+//   content: "";
+//   width: 8px;
+//   height: 4px;
+//   background-image: url("./img/sprite.svg#sp-calligraphiya_uslugi_icon");
+//   background-position: center;
+//   background-repeat: no-repeat;
+// }

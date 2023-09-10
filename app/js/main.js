@@ -23,6 +23,12 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _components_button__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(_components_button__WEBPACK_IMPORTED_MODULE_5__);
 /* harmony import */ var _components_smallHeadline__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./components/smallHeadline */ "./src/js/components/smallHeadline.js");
 /* harmony import */ var _components_smallHeadline__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(_components_smallHeadline__WEBPACK_IMPORTED_MODULE_6__);
+/* harmony import */ var _components_preloader__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./components/preloader */ "./src/js/components/preloader.js");
+/* harmony import */ var _components_preloader__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(_components_preloader__WEBPACK_IMPORTED_MODULE_7__);
+/* harmony import */ var _components_setActivMenu__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./components/setActivMenu */ "./src/js/components/setActivMenu.js");
+/* harmony import */ var _components_setActivMenu__WEBPACK_IMPORTED_MODULE_8___default = /*#__PURE__*/__webpack_require__.n(_components_setActivMenu__WEBPACK_IMPORTED_MODULE_8__);
+
+
 
 
 
@@ -223,7 +229,7 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 });
 
-// document.addEventListener('DOMContentLoaded', () => {
+//   document.addEventListener('DOMContentLoaded', () => {
 //     let button = document.querySelector('.button-up');
 //     if (button) {
 //       window.onscroll = function () {
@@ -235,8 +241,8 @@ document.addEventListener('DOMContentLoaded', () => {
 //       };
 
 //       button.onclick = function () {
-// Прокручиваем страницу к началу плавно
-//         window.scrollTo({
+//         // Прокручиваем страницу к началу плавно
+//         window.scrollBy()({
 //           top: 0,
 //           behavior: 'smooth'
 //         });
@@ -532,6 +538,27 @@ let isEnabled = true;
 // swipedetect(el);
 
 // slaider carusel отзывы end
+
+/***/ }),
+
+/***/ "./src/js/components/preloader.js":
+/*!****************************************!*\
+  !*** ./src/js/components/preloader.js ***!
+  \****************************************/
+/***/ (() => {
+
+// preloader
+window.addEventListener('load', function () {
+  // Добавить класс "loaded" к body после загрузки страницы
+  this.setTimeout(() => {
+    document.body.classList.add('loaded');
+  }, 5000);
+});
+
+// window.onload
+// Событие load на объекте window наступает, когда загрузилась вся страница, включая стили, картинки и другие ресурсы. Это событие доступно через свойство onload.
+
+// В примере ниже правильно показаны размеры картинки, потому что window.onload дожидается всех изображений:
 
 /***/ }),
 
@@ -872,6 +899,28 @@ window.addEventListener('load', function () {
         }
       });
     }
+  }
+});
+
+/***/ }),
+
+/***/ "./src/js/components/setActivMenu.js":
+/*!*******************************************!*\
+  !*** ./src/js/components/setActivMenu.js ***!
+  \*******************************************/
+/***/ (() => {
+
+document.addEventListener('DOMContentLoaded', () => {
+  if (document.body.hasAttribute('data-page')) {
+    const dataPageBody = document.body.getAttribute('data-page');
+    const menuItems = document.querySelectorAll('li[data-link-item]');
+    menuItems.forEach(el => {
+      el.querySelector('a').classList.remove('site-list__link--active');
+      el.classList.remove('site-list__link--active');
+      if (el.getAttribute('data-link-item').includes(dataPageBody)) {
+        el.classList.add('site-list__link--active');
+      }
+    });
   }
 });
 

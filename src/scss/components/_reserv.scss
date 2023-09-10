@@ -21,25 +21,25 @@
   border-top: 1px solid #aaaaaa;
   cursor: default; /* Стандартный курсор */
 
-  &:hover::after {
-    width: 100%;/* Для ::after при наведении устанавливаем подчеркивание */
-  }
+  // &:hover::after {
+  //   width: 100%;/* Для ::after при наведении устанавливаем подчеркивание */
+  // }
 }
 
-.reserv__text::after {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  margin: auto;
-  width: 0;
-  content: ".";
-  color: transparent;
-  background: #aaaaaa;
-  height: 1px;
-  transition: all .5s;
-  -webkit-transition: all .5s;
-}
+// .reserv__text::after {
+//   position: absolute;
+//   bottom: 0;
+//   left: 0;
+//   right: 0;
+//   margin: auto;
+//   width: 0;
+//   content: ".";
+//   color: transparent;
+//   background: #aaaaaa;
+//   height: 1px;
+//   transition: all .5s;
+//   -webkit-transition: all .5s;
+// }
 
 
 @media (min-width: $tablet-width) {

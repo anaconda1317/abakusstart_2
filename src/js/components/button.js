@@ -16,7 +16,7 @@ document.addEventListener('DOMContentLoaded', ()=>{
   })
   
 
-// document.addEventListener('DOMContentLoaded', () => {
+//   document.addEventListener('DOMContentLoaded', () => {
 //     let button = document.querySelector('.button-up');
 //     if (button) {
 //       window.onscroll = function () {
@@ -28,11 +28,12 @@ document.addEventListener('DOMContentLoaded', ()=>{
 //       };
   
 //       button.onclick = function () {
-        // Прокручиваем страницу к началу плавно
-//         window.scrollTo({
+//         // Прокручиваем страницу к началу плавно
+//         window.scrollBy()({
 //           top: 0,
 //           behavior: 'smooth'
 //         });
 //       };
 //     }
 //   });
+  
