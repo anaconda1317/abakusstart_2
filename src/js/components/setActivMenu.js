@@ -9,6 +9,13 @@ document.addEventListener('DOMContentLoaded', ()=>{
                 el.classList.add('site-list__link--active')
            }
         });
+    }else{
+        const menuItems = document.querySelectorAll('li[data-link-item] a');
+        if(menuItems.length > 0){
+            menuItems.forEach( el => {
+                el.classList.remove('site-list__link--active')
+            })
+        }
     }
     
 })

@@ -120,6 +120,10 @@
 
 @media (min-width: $tablet-width) {
 
+  .swiper-slide {
+    pointer-events: all;
+  }
+
   .swiper-slide .person-reviews__item {
     padding: 20px 80px 0;
   }
@@ -130,7 +134,7 @@
 
   .carousel-swiper--popular .popular__item-link:hover,
   .carousel-swiper--popular .popular__item-link:focus {
-  opacity: 0.7;
+    opacity: 0.7;
   // text-decoration: underline;
   }
 

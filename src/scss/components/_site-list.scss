@@ -147,14 +147,13 @@
   .site-list__link--active .site-list__item--has-children>a{
     color: #ff5722;
     cursor: pointer;
-  }
-  
+  } 
 
-  .site-list__item .site-list__link {
+   .site-list__item .site-list__link {
     position: relative;
   }
-  
-  .site-list__item .site-list__link::after {
+ 
+  .site-list__item:not(.site-list__link--active) .site-list__link::after {
     position: absolute;
     bottom: 0;
     left: 0;
@@ -169,10 +168,32 @@
     transition: width .65s ease-in-out;
     transition-delay: .75s ease-in-out;
   }
-  
+  .site-list__item.site-list__link--active .site-list__link::after {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    width: 0;
+    content: ".";
+    color: transparent;
+    background: #ff5722;
+    
+    height: 1px;
+    // transition: all .5s;
+    transition: width .65s ease-in-out;
+    transition-delay: .75s ease-in-out;
+  }
   .site-list__item .site-list__link:hover::after {
     width: 100%;
   }
+
+  .site-list__link--active:hover::after, 
+  .site-list__link--active:hover::after >a,
+  .site-list__link--active:hover::after .site-list__item--has-children>a{
+    background: #ff5722;
+  }
+
 
   .site-list__item .sub-menu {
     display: none;

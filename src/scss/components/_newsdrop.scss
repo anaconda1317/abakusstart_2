@@ -5,6 +5,10 @@
   border-bottom: 1px solid #0033ff;
 }
 
+.newsdrop__container {
+  
+}
+
 .newsdrop__wrapper {
   position: relative;
   margin: 0 auto;
@@ -78,13 +82,12 @@
 
 // Текст новости
 .newsdrop__content-container {
-  flex: 1;
-  max-width: 100%; /* 100% от ширины .news-block */
   display: flex;
   flex-grow: 1;
   flex-direction: column;
+  max-width: 100%; /* 100% от ширины .news-block */
+  padding: 16px;
   text-align: left;
-  margin-left: 10px; /* Отступ между изображением и контентом */
 }
 
 /* Стили для заголовка новости */
@@ -147,16 +150,15 @@
 
   // Фото новости
   .newsdrop__image-container {
-    flex: 1;
+    flex-grow: 1;
     max-width: 50%; /* 50% от ширины .news-block */
   }
 
-  .newsdrop__content-container {
-    flex: 1;
-    max-width: 50%; /* 50% от ширины .news-block */
+  .newsdrop__content-container { 
     display: flex;
     flex-grow: 1;
     flex-direction: column;
+    max-width: 50%; /* 50% от ширины .news-block */ 
     text-align: left;
     margin-left: 10px; /* Отступ между изображением и контентом */
   }
