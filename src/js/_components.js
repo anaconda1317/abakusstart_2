@@ -7,4 +7,5 @@ import './components/button';
 import './components/smallHeadline';
 import './components/preloader';
 import './components/setActivMenu';
+import './components/dropdown';
 

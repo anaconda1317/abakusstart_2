@@ -2,36 +2,42 @@
 <!-- .filter этот класс будет-->
 <section class="dropdown">
   <div class="dropdown__container"> 
+<!-- 
+    можно убрать св-ва  его в контейнер ?-->
       <div class="dropdown__wrapper">
-        <button class="dropdown__toggle-button" type="button" id="dropdownMenuButton" aria-expanded="false">Новости:</button>
+
+
+        <button class="dropdown__toggle-button" type="button" id="dropdownMenuButton" aria-expanded="false" data-dropdown-current="all">Новости: <span class="dropdown__toggle-curren">Все</span></button>
         <!-- <ul class="dropdown__menu filter" aria-labelledby="dropdownMenuButton"> -->
         <ul class="dropdown__menu __filter" aria-labelledby="dropdownMenuButton">
           <li class="dropdown__menu-item dropdown__menu-item__mental"value="mental">
-            Ментальная
+            <!-- span может обернуть -->
+            <span class="dropdown__menu-text dropdown__menu-text__mental">Ментальная</span>
+             <!-- span может обернуть -->
           </li>
-          <li class="dropdown__menu-item dropdown__menu-item--en"value="english">
-            English
+          <li class="dropdown__menu-item dropdown__menu-item--en" data-dropdown-value="english">
+            <span class="dropdown__menu-text dropdown__menu-text__engl">English</span>            
           </li>
-          <li class="dropdown__menu-item dropdown__menu-item--robot"value="robot">
-            Робототехника
+          <li class="dropdown__menu-item dropdown__menu-item--robot" data-dropdown-value="robot">
+            <span class="dropdown__menu-text dropdown__menu-text__robot">Робототехника</span> 
           </li>
-          <li class="dropdown__menu-item dropdown__menu-item--tech"value="repetitor">
-            Репетитор
+          <li class="dropdown__menu-item dropdown__menu-item--tech" data-dropdown-value="repetitor">
+            <span class="dropdown__menu-text dropdown__menu-text__repet">Репетитор</span>             
           </li>
-          <li class="dropdown__menu-item dropdown__menu-item--psich"value="psicho">
-            Психотерапевт
+          <li class="dropdown__menu-item dropdown__menu-item--psich" data-dropdown-value="psicho">
+            <span class="dropdown__menu-text dropdown__menu-text__psicho">Психотерапевт</span>              
           </li>
-          <li class="dropdown__menu-item dropdown__menu-item--psich"value="calligraphy">
-            Каллиграфия
+          <li class="dropdown__menu-item dropdown__menu-item--psich" data-dropdown-value="calligraphy">
+            <span class="dropdown__menu-text dropdown__menu-text__calligr">Каллиграфия</span>
           </li>
-          <li class="dropdown__menu-item dropdown__menu-item--psich"value="neuropsychologist">
-            Нейропсихолог
+          <li class="dropdown__menu-item dropdown__menu-item--psich" data-dropdown-value="neuropsychologist">
+            <span class="dropdown__menu-text dropdown__menu-text__neuro">Нейропсихолог</span>            
           </li>
-          <li class="dropdown__menu-item dropdown__menu-item--psich"value="logopedist">
-            Логопед
+          <li class="dropdown__menu-item dropdown__menu-item--psich" data-dropdown-value="logopedist">
+            <span class="dropdown__menu-text dropdown__menu-text__logo">Логопед</span> 
           </li>
           <li class="dropdown__menu-item dropdown__menu-item--all" value="all">
-            Все новости
+            <span class="dropdown__menu-text dropdown__menu-text__all">Все новости</span>             
           </li>
         </ul>
       </div>

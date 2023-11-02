@@ -1,0 +1,195 @@
+.services {
+  // background-color: #f1f4fb;
+  margin: 0 auto;
+  margin-bottom: 10px;
+  margin-top: 10px;
+  // width: 320px;
+}
+
+.services__container {
+  position: relative;
+  display: flex;
+  align-items: center;
+  margin: 0 auto;
+  width: 300px;
+}
+
+.services__block {
+  display: flex;
+  justify-content: center; 
+  align-items: center;
+  flex-wrap: wrap;
+  text-align: center;
+  // margin: 10px;
+  margin: 15px 10px;
+  // padding: 3px;
+  // margin: 0;
+}
+
+.service__link {
+  position: relative;
+  display: inline-block;
+  width: auto;
+  height: auto;
+  min-width: 180px;
+  background-color: transparent;
+  border: none;
+  margin: 0px 25px 10px;
+  border: none;
+  cursor: pointer;
+
+    // /* Устанавливаем cursor: pointer только для активных ссылок */
+    &:not([href="#"]) {
+      cursor: pointer;
+    }
+
+    &:hover,
+    &:focus {
+      color: #fff;
+      // color: rgb(255,255,255);
+      transition: 0.2s 0.1s;
+  }
+
+    &:active {
+    // opacity: 0.5;
+    opacity: 0.6;
+  }
+
+    &::before {
+      position: absolute;
+      content: "";
+      // background-color: rgb(28, 31, 30);
+      background-color: #9a9ca0;
+      transition: 0.3s ease-out;
+  }
+
+      &::after {
+        position: absolute;
+        content: "";
+  }
+}
+
+.service__link span {
+  position: relative;
+  display: inline-block;
+  font-size: 14px;
+  font-weight: bold;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 10px 15px;
+  // padding: 15px 20px; 
+  color:  #9a9ca0;
+  border: 1px solid  #9a9ca0;
+  // color: rgb(28, 31, 30);
+  // border: 1px solid rgb(28, 31, 30);
+  border-radius: 4px 0px;
+  transition: 0.2s;
+} 
+
+.service__link span:hover {
+  color: rgb(255,255,255);
+  transition: 0.2s 0.1s;
+}
+
+
+
+  
+  /* hover-slide-right */
+
+  .service__link.service__link--hover-slide-right::before {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    height: 100%;
+    width: 0%; 
+  }
+
+  .service__link.service__link--hover-slide-right:hover::before {
+    width: 100%;
+  }
+
+
+  // .service__link {
+  //   position: relative;
+  //   display: inline-block;
+  //   padding: 3px 10px 4px 10px;
+  //   margin-right: 12px; /* Расстояние между элементами */
+  //   margin-bottom: 10px;  /* Расстояние между cтрочками */
+  //   font-weight: 400;
+  //   font-size: 16px;
+  //   line-height: 21px;
+  //   color: #97989c;  
+  //   text-decoration: none;
+  //   opacity: 1;
+  //   // border: 1px solid #97989c;
+  //   border: 1px solid #e5e5e5;
+  //   background-color: #f4f5f7;
+  //   border-radius: 4px;
+  //   cursor: pointer;
+  //   // transition: 0.2s;
+  //   // transform: 0.3s ease-in;
+  //   transition: box-shadow 0.3s ease, background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease, transform 0.3s ease-in;
+  
+  //     &:hover,
+  //     &:focus {
+  //     color: #5f6366;
+  //     background-color: #eee8e0;
+  //     border-color: #e1d7cb;
+  //     // border: none;
+  //     box-shadow: 0 0 20px 0 #f0f0f0;
+  //     outline: none;
+  //     // opacity: 0.6;
+  //     transform: scale(1.05);
+  //   }
+  
+  //     &:active {
+  //     // opacity: 0.5;
+  //     opacity: 0.6;
+  //   }
+  // }
+
+
+
+
+@media (min-width: $tablet-width) {
+
+  .services { 
+    margin: 0 auto;
+  }
+
+  .services__container {
+    width: 768px;
+    margin: 0 auto;    
+  }
+
+  .services__block {
+    justify-content: flex-start;
+    margin-left: 60px;
+    margin-bottom: 0px;
+  }
+
+  .service__link {
+    // min-width: 150px;
+    min-width: 170px;
+    margin-left: 0px;
+    margin-right: 50px;
+  }
+
+}
+
+
+@media (min-width: $desktop-width) {
+
+  .services { 
+    margin-bottom: 10px;
+  }
+
+  .services__container {
+    width: 1200px;  
+  }
+
+}

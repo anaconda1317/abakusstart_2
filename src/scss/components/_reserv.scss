@@ -7,6 +7,7 @@
   line-height: 26px;
   font-weight: 400;
   text-align: center;
+  color: #aaaaaa;
 }
 
 .reserv__text {
@@ -15,7 +16,8 @@
   width: 310px;
   padding: 0;
   margin: 0 auto;
-  color: #aaaaaa;
+  // color: #aaaaaa;
+  color: inherit;
   text-transform: none;
   text-decoration: none; /* Убирает подчеркивание */
   border-top: 1px solid #aaaaaa;

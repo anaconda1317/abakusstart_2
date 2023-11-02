@@ -40,16 +40,19 @@
   text-transform: uppercase;
   // color: inherit;
   opacity: 1;
+  transition: 0.2s;
 }
 
 .breadcrumb-list__link:hover,
 .breadcrumb-list__link:focus {
   outline: none;
   opacity: 0.6;
+  transition: 0.2s;
 }
 
 .breadcrumb-list li:last-child {
   opacity: 0.5;
+  transition: 0.2s;
 }
 
 .breadcrumb-list li + li {

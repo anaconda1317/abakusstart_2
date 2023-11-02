@@ -149,6 +149,10 @@
     cursor: pointer;
   } 
 
+  .site-list__link--active>a svg {
+    fill: #ff5722;
+  } 
+
    .site-list__item .site-list__link {
     position: relative;
   }
@@ -187,13 +191,6 @@
   .site-list__item .site-list__link:hover::after {
     width: 100%;
   }
-
-  .site-list__link--active:hover::after, 
-  .site-list__link--active:hover::after >a,
-  .site-list__link--active:hover::after .site-list__item--has-children>a{
-    background: #ff5722;
-  }
-
 
   .site-list__item .sub-menu {
     display: none;
