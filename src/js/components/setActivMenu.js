@@ -6,7 +6,15 @@ document.addEventListener('DOMContentLoaded', ()=>{
             el.querySelector('a').classList.remove('site-list__link--active')
             el.classList.remove('site-list__link--active')
            if ( el.getAttribute('data-link-item').includes(dataPageBody) ){ 
-                el.classList.add('site-list__link--active')
+                if(dataPageBody === 'main'){
+                    el.classList.add('site-list__link--active');
+                    el.querySelector('a').removeAttribute('href')
+                    el.querySelector('a').classList.add('site-list__link--not-decoration');
+                
+                }else{
+                    el.classList.add('site-list__link--active');
+                }
+                
            }
         });
     }else{

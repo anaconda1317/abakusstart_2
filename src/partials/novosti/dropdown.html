@@ -7,19 +7,19 @@
       <div class="dropdown__wrapper">
 
 
-        <button class="dropdown__toggle-button" type="button" id="dropdownMenuButton" aria-expanded="false" data-dropdown-current="all">Новости: <span class="dropdown__toggle-curren">Все</span></button>
+        <button class="dropdown__toggle-button" type="button" id="dropdownMenuButton" aria-expanded="false" data-dropdown-current="all">Новости: <span class="dropdown__toggle-current">Все</span></button>
         <!-- <ul class="dropdown__menu filter" aria-labelledby="dropdownMenuButton"> -->
         <ul class="dropdown__menu __filter" aria-labelledby="dropdownMenuButton">
-          <li class="dropdown__menu-item dropdown__menu-item__mental"value="mental">
+          <li class="dropdown__menu-item dropdown__menu-item__mental" data-dropdown-value="mental">
             <!-- span может обернуть -->
             <span class="dropdown__menu-text dropdown__menu-text__mental">Ментальная</span>
              <!-- span может обернуть -->
           </li>
-          <li class="dropdown__menu-item dropdown__menu-item--en" data-dropdown-value="english">
-            <span class="dropdown__menu-text dropdown__menu-text__engl">English</span>            
-          </li>
           <li class="dropdown__menu-item dropdown__menu-item--robot" data-dropdown-value="robot">
             <span class="dropdown__menu-text dropdown__menu-text__robot">Робототехника</span> 
+          </li>
+          <li class="dropdown__menu-item dropdown__menu-item--en" data-dropdown-value="english">
+            <span class="dropdown__menu-text dropdown__menu-text__engl">English</span>            
           </li>
           <li class="dropdown__menu-item dropdown__menu-item--tech" data-dropdown-value="repetitor">
             <span class="dropdown__menu-text dropdown__menu-text__repet">Репетитор</span>             
@@ -36,7 +36,7 @@
           <li class="dropdown__menu-item dropdown__menu-item--psich" data-dropdown-value="logopedist">
             <span class="dropdown__menu-text dropdown__menu-text__logo">Логопед</span> 
           </li>
-          <li class="dropdown__menu-item dropdown__menu-item--all" value="all">
+          <li class="dropdown__menu-item dropdown__menu-item--all" data-dropdown-value="all">
             <span class="dropdown__menu-text dropdown__menu-text__all">Все новости</span>             
           </li>
         </ul>

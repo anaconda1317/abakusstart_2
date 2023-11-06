@@ -48,7 +48,9 @@
       "datepublished": "2023-04-26",
       "valueId": "https://abakusstart.ru/mentalnaya-arifmetika.php"
     })
-    @include('partials/common/inner_json_product.html')
+    @include('partials/common/inner_json_product.html', {
+      'price' : '900RUB'
+    })
     @include('partials/common/inner_json_local.html', {
       "name": "Детский центр развития в Красноярске в Северном | &laquo;СТАРТ&raquo;.",
       "email": "info@abakusstart.ru",     
@@ -69,6 +71,6 @@
     @include('partials/common/inner_json_services.html')
     <!-- @include('html/h1.html') пример include -->
   </div>
-</body>
+</body>С
 
 </html>
