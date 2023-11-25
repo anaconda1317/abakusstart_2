@@ -68,6 +68,23 @@ const swiper = new Swiper('.carousel-swiper', {
   setTransition: 20000
 });
 
+// слайдер в ACTION.html - mob, desk, tablet - сделали новый класс .carousel-swiper--action - им работать
+// const swiperAction = new Swiper('.carousel-swiper--action', {
+//   direction: 'horizontal',
+//   slidesPerView: 1,
+//   grabCursor: true,
+//   loop: true,
+//   pagination: {
+//     el: '.swiper-pagination',
+//     clickable: true,
+//   },
+//   navigation: {
+//     nextEl: '.swiper-button-next',
+//     prevEl: '.swiper-button-prev',
+//   },
+//   setTransition: 20000
+// });
+
 if (window.innerWidth <= 480) {
 const swiperPopular = new Swiper('.carousel-swiper--popular', {
   direction: 'horizontal',
@@ -86,6 +103,24 @@ const swiperPopular = new Swiper('.carousel-swiper--popular', {
 });
 }
 
+// слайдер в photo.html МОБИЛКА  - сделали новый класс .carousel-swiper--photo - им работать
+// if (window.innerWidth <= 480) {
+//   const swiperPhoto = new Swiper('.carousel-swiper--photo', {
+//     direction: 'horizontal',
+//     slidesPerView: 1,
+//     grabCursor: true,
+//     loop: true,
+//     pagination: {
+//       el: '.swiper-pagination',
+//       clickable: true,
+//     },
+//     navigation: {
+//       nextEl: '.swiper-button-next',
+//       prevEl: '.swiper-button-prev',
+//     },
+//     setTransition: 20000
+//   });
+//   }
  
   if (window.innerWidth > 480){
     
