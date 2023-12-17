@@ -9,4 +9,4 @@ import './components/preloader';
 import './components/setActivMenu';
 import './components/dropdown';
 import './components/newFilter';
-
+import './components/submenu_animation';

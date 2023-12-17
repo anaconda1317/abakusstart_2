@@ -31,6 +31,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _components_dropdown__WEBPACK_IMPORTED_MODULE_9___default = /*#__PURE__*/__webpack_require__.n(_components_dropdown__WEBPACK_IMPORTED_MODULE_9__);
 /* harmony import */ var _components_newFilter__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./components/newFilter */ "./src/js/components/newFilter.js");
 /* harmony import */ var _components_newFilter__WEBPACK_IMPORTED_MODULE_10___default = /*#__PURE__*/__webpack_require__.n(_components_newFilter__WEBPACK_IMPORTED_MODULE_10__);
+/* harmony import */ var _components_submenu_animation__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./components/submenu_animation */ "./src/js/components/submenu_animation.js");
+/* harmony import */ var _components_submenu_animation__WEBPACK_IMPORTED_MODULE_11___default = /*#__PURE__*/__webpack_require__.n(_components_submenu_animation__WEBPACK_IMPORTED_MODULE_11__);
+
 
 
 
@@ -691,30 +694,32 @@ let isEnabled = true;
 
 document.addEventListener('DOMContentLoaded', event => {
   const listFilter = document.querySelector('.__filter');
-  const elementFilter = listFilter.querySelectorAll('.dropdown__menu-item');
   if (listFilter) {
+    const elementFilter = listFilter.querySelectorAll('.dropdown__menu-item');
     const elementNews = document.querySelectorAll('.newsdrop__item');
     const currentValueFilter = document.querySelector('.dropdown__toggle-current');
-    elementFilter.forEach(el => {
-      el.addEventListener('click', e => {
-        if (e.currentTarget.hasAttribute('data-dropdown-value')) {
-          let dataValue = e.currentTarget.getAttribute('data-dropdown-value');
-          let nameValue = e.target.closest('.dropdown__menu-text');
-          elementNews.forEach(item => {
-            if (item.getAttribute('data-category') !== dataValue && dataValue !== 'all') {
-              item.style.display = 'none';
-            } else {
-              item.style.display = '';
-              currentValueFilter.textContent = nameValue.textContent;
-            }
-            if (dataValue === 'all') {
-              item.style.display = '';
-            }
-            listFilter.classList.remove('__show');
-          });
-        }
+    if (elementFilter.length > 0) {
+      elementFilter.forEach(el => {
+        el.addEventListener('click', e => {
+          if (e.currentTarget.hasAttribute('data-dropdown-value')) {
+            let dataValue = e.currentTarget.getAttribute('data-dropdown-value');
+            let nameValue = e.target.closest('.dropdown__menu-text');
+            elementNews.forEach(item => {
+              if (item.getAttribute('data-category') !== dataValue && dataValue !== 'all') {
+                item.style.display = 'none';
+              } else {
+                item.style.display = '';
+                currentValueFilter.textContent = nameValue.textContent;
+              }
+              if (dataValue === 'all') {
+                item.style.display = '';
+              }
+              listFilter.classList.remove('__show');
+            });
+          }
+        });
       });
-    });
+    }
   }
 });
 
@@ -1154,6 +1159,73 @@ window.addEventListener('scroll', handleScroll);
 
 // Вызываем функцию при загрузке страницы, чтобы определить начальное состояние
 handleScroll();
+
+/***/ }),
+
+/***/ "./src/js/components/submenu_animation.js":
+/*!************************************************!*\
+  !*** ./src/js/components/submenu_animation.js ***!
+  \************************************************/
+/***/ (() => {
+
+// sub-menu задержка на 15 сек
+
+document.addEventListener("DOMContentLoaded", function () {
+  // получаем все элементы которые имеют сабменю
+  const itemsHasSubmenu = document.querySelectorAll('.site-list__item--has-children');
+  if (itemsHasSubmenu.length > 0) {
+    Array.from(itemsHasSubmenu).forEach(item => {
+      if (window.innerWidth <= 768) {
+        const btnOpenSubmnuOnMobile = item.querySelector('.sub-menu__ikon-wrapper');
+        if (btnOpenSubmnuOnMobile) {
+          btnOpenSubmnuOnMobile.addEventListener('click', function (e) {
+            e.preventDefault;
+            let toggleChange = false;
+            if (btnOpenSubmnuOnMobile.classList.contains('__animation')) {
+              toggleChange = true;
+            } else {
+              toggleChange = false;
+            }
+            btnOpenSubmnuOnMobile.classList.toggle('__animation');
+            fadeInItems(0, false, toggleChange);
+          });
+        }
+      } else {
+        // слушаем события клика по данной кнопке
+        item.addEventListener('mouseenter', function (e) {
+          e.preventDefault;
+          fadeInItems(0);
+        });
+        item.addEventListener('mouseleave', function (e) {
+          console.log(e);
+          e.preventDefault;
+          fadeInItems(0, true);
+        });
+      }
+    });
+  }
+  function fadeInItems(index) {
+    let hide = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : false;
+    let viewAnimationOnMobile = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : false;
+    const menuItems = document.querySelectorAll(".sub-menu__item");
+    if (!hide && !viewAnimationOnMobile) {
+      if (index < menuItems.length) {
+        setTimeout(function () {
+          menuItems[index].style.opacity = "1";
+          fadeInItems(index + 1);
+        }, 150); // Задержка в 0.15 секунд
+      }
+    }
+
+    if (hide || viewAnimationOnMobile) {
+      if (index < menuItems.length) {
+        menuItems.forEach(el => {
+          el.style.opacity = "0";
+        });
+      }
+    }
+  }
+});
 
 /***/ }),
 
